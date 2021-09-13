@@ -1,21 +1,21 @@
-echo 'Hello AGAIN from .zshrc'
+echo 'Hello from .zshrc'
 
 # Set Variables
-
-export BAT_THEME="GitHub"
-
 # Syntax highlighting for man pages using bat
+export BAT_THEME="GitHub"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export NULLCMD=bat
-export N_PREFIX="$HOME/.n"
+
 
 # Change ZSH Options
 
-# Create Aliases
 
-alias ls='ls -lAFh'
+# Create Aliases
+alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
+alias bbd='brew bundle dump --force --describe'
 alias trail='<<<${(F)path}'
+alias rm=trash
 
 # Customize Prompt(s)
 PROMPT='
@@ -23,16 +23,23 @@ PROMPT='
 
 RPROMPT='%*'
 
-# Add Locations to $PATH Variable
 
-export PATH="$PATH:$N_PREFIX/bin"
+# Add Locations to $path Array
+typeset -U path
+
+path=(
+  "$N_PREFIX/bin"
+  $path
+)
+
 
 # Write Handy Functions
-
 function mkcd() {
-  mkdir -p "$@" && cd "$_"
+  mkdir -p "$@" && cd "$_";
 }
 
+
 # Use ZSH Plugins
+
 
 # ...and Other Surprises
