@@ -24,6 +24,8 @@ brew "tldr"
 brew "trash-cli"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# UNIX shell (command interpreter)
+brew "zsh"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
 # Collection of apps and services for photography, design, video, web, and UX
