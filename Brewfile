@@ -20,8 +20,6 @@ brew "nano"
 brew "postgresql", restart_service: true
 # Simplified and community-driven man pages
 brew "tldr"
-# Command-line interface to the freedesktop.org trashcan
-brew "trash-cli"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # UNIX shell (command interpreter)
