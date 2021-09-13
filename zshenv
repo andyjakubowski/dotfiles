@@ -1,3 +1,4 @@
+export DOTFILES="$HOME/.dotfiles"
 export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
 export N_PREFIX="$HOME/.n"
 
