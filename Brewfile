@@ -1,8 +1,3 @@
-# Heroku Homebrew Tap
-# two formulas: heroku and heroku-node
-# unclear why Heroku hosts its own tap instead of using homebrew/core
-# tap "heroku/brew"
-
 # Bundler for non-Ruby dependencies from Homebrew, Homebrew Cask, Mac App Store and Whalebrew.
 tap "homebrew/bundle"
 
@@ -19,21 +14,21 @@ tap "homebrew/services"
 # Distributed revision control system
 # Surprised it doesn’t come pre-packaged in macOS?
 # Seems like XCode Command Line Tools installs git, too
-# brew "git"
+brew "git"
 
 # User-friendly cURL replacement (command-line HTTP client)
 # https://httpie.io/
-# brew "httpie"
+brew "httpie"
 
 # Lightweight and flexible command-line JSON processor
 # brew "jq"
 
 # Mac App Store command-line interface
-# brew "mas"
+brew "mas"
 
 # Object-relational database system
 # Used it when learning about databases at Launch School
-# brew "postgresql", restart_service: true
+brew "postgresql", restart_service: true
 
 # Install various Ruby versions and implementations
 # brew "ruby-build"
@@ -45,10 +40,10 @@ tap "homebrew/services"
 # brew "rbenv"
 
 # Simplified and community-driven man pages
-# brew "tldr"
+brew "tldr"
 
 # Display directories as trees (with optional color/HTML output)
-# brew "tree"
+brew "tree"
 
 # Everything you need to get started with Heroku
 # brew "heroku/brew/heroku"
@@ -145,43 +140,43 @@ mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
 
 # The “lobby” app used to install all Adobe apps
-# cask "adobe-creative-cloud"
+cask "adobe-creative-cloud"
 
 # Application launcher and productivity software
 cask "alfred"
 
 # API documentation browser and code snippet manager
-# cask "homebrew/cask/dash"
+cask "homebrew/cask/dash"
 
 # Markdown editor for developers
-# cask "boostnote"
+cask "boostnote"
 
 # Voice and text chat software
-# cask "discord"
+cask "discord"
 
 # Window size manager
 mas "Divvy", id: 413857545
 
 # Collaborative team software
-# cask "figma"
+cask "figma"
 
 # Web browser
-# cask "firefox"
+cask "firefox"
 
 # Write for N minutes, or lose progress if you stop
-# mas "Flowstate", id: 1051600144
+mas "Flowstate", id: 1051600144
 
 # Web browser
-# cask "google-chrome"
+cask "google-chrome"
 
 # The Benchmark of Markdown Writing Apps
 mas "iA Writer", id: 775737590
 
 # Terminal emulator as alternative to Apple's Terminal app
-# cask "iterm2"
+cask "iterm2"
 
 # Open-source screen recorder built with web technology
-# cask "kap"
+cask "kap"
 
 # Keyboard customizer
 cask "karabiner-elements"
@@ -190,10 +185,10 @@ cask "karabiner-elements"
 mas "Kindle", id: 405399194
 
 # Web browser
-# cask "microsoft-edge"
+cask "microsoft-edge"
 
 # Mind maps
-# mas "MindNode", id: 1289197285
+mas "MindNode", id: 1289197285
 
 # Note taking and organization
 cask "notational-velocity"
@@ -205,13 +200,13 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 
 # GUI client for PostgreSQL databases
-# cask "postico"
+cask "postico"
 
 # Block your own access to distracting websites
 cask "selfcontrol"
 
 # Digital design and prototyping platform
-# cask "sketch"
+cask "sketch"
 
 # Annotate images
 mas "Skitch", id: 425955336
@@ -220,7 +215,7 @@ mas "Skitch", id: 425955336
 cask "skype"
 
 # Team communication
-# mas "Slack", id: 803453959
+mas "Slack", id: 803453959
 
 # Music streaming service
 cask "spotify"
@@ -232,16 +227,19 @@ mas "Things", id: 904280696
 cask "tor-browser"
 
 # File transfer application
-# cask "transmit"
+cask "transmit"
 
 # Open-source code editor
-# cask "visual-studio-code"
+cask "visual-studio-code"
 
 # Apple’s IDE
 # mas "Xcode", id: 497799835
 
 # Video communication and virtual meeting platform
 cask "zoom"
+
+# Client for the Dropbox cloud storage service
+cask "dropbox"
 
 
 ###############################
@@ -272,9 +270,6 @@ cask "zoom"
 
 # App to build and share containerized applications and microservices
 # cask "homebrew/cask/docker"
-
-# Client for the Dropbox cloud storage service
-# cask "dropbox"
 
 # Font editor and converter for outline and bitmap fonts, font metrics inspector
 # cask "homebrew/cask/fontforge"
