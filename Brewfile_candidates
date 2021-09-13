@@ -1,0 +1,104 @@
+# Lightweight and flexible command-line JSON processor
+# brew "jq"
+
+# Install various Ruby versions and implementations
+# brew "ruby-build"
+
+# Ruby version manager
+# Only focuses on switching Ruby versions
+# You need to install Ruby versions yourself, or use ruby-build
+# https://github.com/rbenv/rbenv/wiki/Why-rbenv%3F
+# brew "rbenv"
+
+# Everything you need to get started with Heroku
+# brew "heroku/brew/heroku"
+
+# Lightweight DNS forwarder and DHCP server
+# Used this so I could resolve custom domains like site.andy to a local network IP address
+# Needed custom domains to run my site in HTTPS with an SSL certificate self-issued to that domain to avoid browser warnings
+# brew "dnsmasq"
+
+# Play, record, convert, and stream audio and video
+# I think I used this to extract frames from Red Bull TV videos
+# brew "ffmpeg"
+
+# Tools and libraries to manipulate images in many formats
+# brew "imagemagick"
+
+# Persistent key-value database, with built-in net interface
+# I used this when working on a Rails app hosted on Heroku
+# brew "redis"
+
+# Granddaddy of HTML tools, with support for modern standards
+# corrects and cleans up HTML and XML documents by fixing markup errors and upgrading legacy code to modern standards
+# brew "tidy-html5"
+
+# Vi 'workalike' with many additional features
+# brew "vim"
+
+# Internet file retriever
+# brew "wget"
+
+# Apple’s IDE
+# mas "Xcode", id: 497799835
+
+# Tools for building Android applications
+# cask "android-studio"
+
+# Flash-cards
+# cask "anki"
+
+# Volume booster and equalizer software
+# cask "boom-3d"
+
+# Web debugging Proxy application
+# cask "charles"
+
+# DB Browser for SQLite
+# cask "db-browser-for-sqlite"
+
+# App to build and share containerized applications and microservices
+# cask "homebrew/cask/docker"
+
+# Font editor and converter for outline and bitmap fonts, font metrics inspector
+# cask "homebrew/cask/fontforge"
+
+# Tool that helps teams design every part of the product experience
+# cask "framer"
+
+# Open-source video transcoder
+# cask "handbrake"
+
+# Minify images
+# cask "imagemin"
+
+# Tool to optimize images to a smaller size
+# cask "imageoptim"
+
+# mas "iMovie", id: 408981434
+
+# mas "Keynote", id: 409183694
+
+# Minimal installer for conda
+# includes conda, Python, their dependencies, and a few utilities
+# cask "miniconda"
+
+# HTTP client that helps testing and describing APIs
+# cask "paw"
+
+# Collaboration platform for API development
+# cask "postman"
+
+# Alexey Kuznetsov’s app
+# mas "Telephone", id: 406825478
+
+# mas "The Unarchiver", id: 425424353
+
+# Multimedia player
+# cask "vlc"
+
+# QuickLook plugin for WebP image files 
+# cask "webpquicklook"
+
+# Share, organize and collaborate on designs
+# cask "zeplin"
