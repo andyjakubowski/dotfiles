@@ -1,0 +1,11 @@
+- defaults:
+    link:
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc:
+
+- shell:
+    - echo "Hello from Dotbot"
