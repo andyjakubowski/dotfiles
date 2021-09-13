@@ -13,7 +13,6 @@ export NULLCMD=bat
 # Create Aliases
 alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
-alias bbd='brew bundle dump --force --describe'
 alias trail='<<<${(F)path}'
 alias rm=trash
 
@@ -36,6 +35,14 @@ path=(
 # Write Handy Functions
 function mkcd() {
   mkdir -p "$@" && cd "$_";
+}
+
+# Call bbd from any directory; DOTFILES is set in zshenv
+function bbd() {
+  CURRENT_PWD=$PWD
+  cd $DOTFILES
+  brew bundle dump --force --describe
+  cd $CURRENT_PWD
 }
 
 
