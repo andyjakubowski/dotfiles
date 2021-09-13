@@ -1,12 +1,15 @@
 - defaults:
     link:
-        relink: true
+      relink: true
 
 - clean: ['~']
 
 - link:
     ~/.zshrc:
     ~/.zshenv:
+    ~/.gitconfig:
+      force: true
+      path: gitconfig
 
 - shell:
     -
