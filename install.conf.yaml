@@ -10,6 +10,7 @@
     ~/.gitconfig:
       force: true
       path: gitconfig
+    ~/.nanorc:
     ~/.config/bat:
       create: true
       path: config/bat
