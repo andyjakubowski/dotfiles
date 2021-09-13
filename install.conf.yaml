@@ -23,3 +23,6 @@
       command: ./setup_zsh.zsh
       stdout: true
       stderr: true
+    - command: ./setup_node.zsh
+      stdout: true
+      stderr: true
