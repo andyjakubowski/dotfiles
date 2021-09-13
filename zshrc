@@ -39,10 +39,7 @@ function mkcd() {
 
 # Call bbd from any directory; DOTFILES is set in zshenv
 function bbd() {
-  CURRENT_PWD=$PWD
-  cd $DOTFILES
-  brew bundle dump --force --describe
-  cd $CURRENT_PWD
+  zsh -c "cd $DOTFILES; brew bundle dump --force --describe" 
 }
 
 
