@@ -8,4 +8,7 @@
     ~/.zshrc:
 
 - shell:
-    - echo "Hello from Dotbot"
+    -
+      command: ./setup_homebrew.zsh
+      stdout: true
+      stderr: true
