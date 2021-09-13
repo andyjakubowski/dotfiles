@@ -1,0 +1,118 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/bundle": {
+        "revision": "244bfa18b23948404fc2ee4253eb232053034212"
+      },
+      "homebrew/cask": {
+        "revision": "c2abf209387dcf64ec64b8e89f4f7a5f45eab67b"
+      },
+      "homebrew/core": {
+        "revision": "3bb5372e198459a05cb0300ecb97593200812c21"
+      },
+      "homebrew/services": {
+        "revision": "75e051a0c8e0521385514307030faa0243d70693"
+      }
+    },
+    "mas": {
+      "1Password 7": {
+        "id": "1333542190",
+        "version": "7.8.7"
+      },
+      "AdBlock": {
+        "id": "1402042596",
+        "version": "1.28.2"
+      },
+      "Divvy": {
+        "id": "413857545",
+        "version": "1.5.2"
+      },
+      "iA Writer": {
+        "id": "775737590",
+        "version": "5.6.13"
+      },
+      "Kindle": {
+        "id": "405399194",
+        "version": "1.32.0"
+      },
+      "Numbers": {
+        "id": "409203825",
+        "version": "11.1"
+      },
+      "Pages": {
+        "id": "409201541",
+        "version": "11.1"
+      },
+      "Skitch": {
+        "id": "425955336",
+        "version": "2.9"
+      },
+      "Things": {
+        "id": "904280696",
+        "version": "3.14.2"
+      }
+    },
+    "cask": {
+      "alfred": {
+        "version": "4.5.1,1256",
+        "options": {
+          "full_name": "alfred"
+        }
+      },
+      "karabiner-elements": {
+        "version": "13.5.0",
+        "options": {
+          "full_name": "karabiner-elements"
+        }
+      },
+      "notational-velocity": {
+        "version": "2.0b5,8",
+        "options": {
+          "full_name": "notational-velocity"
+        }
+      },
+      "selfcontrol": {
+        "version": "3.0.3",
+        "options": {
+          "full_name": "selfcontrol"
+        }
+      },
+      "skype": {
+        "version": "8.75.0.140",
+        "options": {
+          "full_name": "skype"
+        }
+      },
+      "spotify": {
+        "version": "1.1.66.580.gbd43cbc9,1.1.66.580.gbd43cbc9-18",
+        "options": {
+          "full_name": "spotify"
+        }
+      },
+      "tor-browser": {
+        "version": "10.5.5",
+        "options": {
+          "full_name": "tor-browser"
+        }
+      },
+      "zoom": {
+        "version": "5.7.6.1320",
+        "options": {
+          "full_name": "zoom"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "big_sur": {
+        "HOMEBREW_VERSION": "3.2.10",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "3bb5372e198459a05cb0300ecb97593200812c21",
+        "CLT": "12.5.0.0.1.1617976050",
+        "Xcode": "12.5",
+        "macOS": "11.5.2"
+      }
+    }
+  }
+}
