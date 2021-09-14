@@ -250,6 +250,52 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Other                                                                       #
 ###############################################################################
 
+# Adjust toolbar title rollover delay
+defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+
+# Expand save panel by default
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
+defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand print panel by default
+defaults write -g PMPrintingExpandedStateForPrint -bool true
+defaults write -g PMPrintingExpandedStateForPrint2 -bool true
+
+# Disable automatic text checking, correction, and substitution
+defaults write -g WebAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g NSAutomaticTextCompletionEnabled -bool false
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
+
+# Touch Bar shows expanded control strip
+defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
+
+# Fast keyboard repeat rate
+# 2 is the fastest you can get in the GUI
+defaults write -g KeyRepeat -int 1
+# 15 is the fastest you can get in the GUI
+defaults write -g InitialKeyRepeat -int 5
+
+# Enable full keyboard access for all controlso
+# (e.g. enable Tab in modal dialogs)
+defaults write -g AppleKeyboardUIMode -int 3
+
+# Increase sound quality for Bluetooth headphones/headsets
+# Not sure how this works exactly, keeping it commented out for now
+# defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+# Use scroll gesture with the Ctrl (^) modifier key to zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+# Follow the keyboard focus while zoomed in
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+
+# Stop iTunes from responding to the keyboard media keys
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
 # Third-Party Software
 
 # iTerm2 Settings
