@@ -5,6 +5,21 @@ echo "\n<<< Starting macOS Setup >>>\n"
 osascript -e 'tell application "System Preferences" to quit'
 
 ###############################################################################
+# Safari                                                                      #
+###############################################################################
+
+if ! command ls ~/Library/Containers/com.apple.Safari 1>/dev/null 2>&1; then
+    echo "\n🚨 There’s a PROBLEM: 🚨"
+    echo "Setting Safari preferences requires Full Disk Access for the app running this process.\n"
+    echo "This can be the Terminal, iTerm, VS Code, or whatever other app you’re using to run this."
+    echo "Enable Full Disk Access for that app in System Preferences > Security & Privacy > Privacy > Full Disk Access, and run ./install again."
+    echo "(nothing will break, the script is idempotent)"
+    echo "Full Disk Access is required because Safari is sandboxed and because of macOS’s System Integrity Protection."
+    echo "Read more: https://lapcatsoftware.com/articles/containers.html\n"
+    exit 1
+fi
+
+###############################################################################
 # Finder                                                                      #
 ###############################################################################
 
