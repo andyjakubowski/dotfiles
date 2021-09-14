@@ -200,7 +200,7 @@ defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock show-process-indicators -bool true
 
 # How quickly the Dock animates into view
-defaults write com.apple.dock autohide-time-modifier -float 0.8
+defaults write com.apple.dock autohide-time-modifier -float 0.7
 
 # How long it takes before the Dock animation starts
 defaults write com.apple.dock autohide-delay -float 0.0
