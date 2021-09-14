@@ -275,9 +275,9 @@ defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
 
 # Fast keyboard repeat rate
 # 2 is the fastest you can get in the GUI
-defaults write -g KeyRepeat -int 1
+defaults write -g KeyRepeat -int 2
 # 15 is the fastest you can get in the GUI
-defaults write -g InitialKeyRepeat -int 5
+defaults write -g InitialKeyRepeat -int 15
 
 # Enable full keyboard access for all controlso
 # (e.g. enable Tab in modal dialogs)
