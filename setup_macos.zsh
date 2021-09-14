@@ -174,17 +174,17 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict-add \
 
 # System Preferences > Dock
 
-# Position the Dock on the right of the screen
-defaults write com.apple.dock orientation -string "right"
+# The position of the Dock on the screen
+defaults write com.apple.dock orientation -string "bottom"
 
 # Make dock icons bigger on hover
-defaults write com.apple.dock magnification -bool true
+# defaults write com.apple.dock magnification -bool true
 
 # Dock icon size
 defaults write com.apple.dock tilesize -int 56
 
 # Dock icon size on hover
-defaults write com.apple.dock largesize -int 60
+# defaults write com.apple.dock largesize -int 60
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
