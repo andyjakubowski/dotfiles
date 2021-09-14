@@ -173,15 +173,46 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict-add \
 ###############################################################################
 
 # System Preferences > Dock
+
+# Position the Dock on the right of the screen
+defaults write com.apple.dock orientation -string "right"
+
+# Make dock icons bigger on hover
 defaults write com.apple.dock magnification -bool true
-defaults write com.apple.dock tilesize -int 50
-defaults write com.apple.dock largesize -int 52
+
+# Dock icon size
+defaults write com.apple.dock tilesize -int 56
+
+# Dock icon size on hover
+defaults write com.apple.dock largesize -int 60
+
+# Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Wipe all app icons from the Dock
+# We want only open apps to show up in the Dock
 defaults write com.apple.dock persistent-apps -array
+
+# Show only open applications in the Dock
+# defaults write com.apple.dock static-only -bool true
+
+# Don’t show indicator dots for open applications
+defaults write com.apple.dock show-process-indicators -bool true
+
 # How quickly the Dock animates into view
 defaults write com.apple.dock autohide-time-modifier -float 0.8
+
 # How long it takes before the Dock animation starts
 defaults write com.apple.dock autohide-delay -float 0.0
+
+# Hide recent apps
+defaults write com.apple.dock show-recents -bool false
+
+# Enable spring loading for all Dock items
+defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+
+# Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool true
 
 ###############################################################################
 # Other                                                                       #
