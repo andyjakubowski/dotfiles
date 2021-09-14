@@ -15,6 +15,7 @@ alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
 alias trail='<<<${(F)path}'
 alias rm=trash
+alias defaults-domains='defaults domains | tr , \\n'
 
 # Customize Prompt(s)
 PROMPT='
