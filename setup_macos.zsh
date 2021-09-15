@@ -91,8 +91,8 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 # Finder                                                                      #
 ###############################################################################
 
-# Finder: show hidden files
-defaults write com.apple.finder AppleShowAllFiles -bool true
+# Show hidden files in Finder, Open/Save dialogs, everywhere
+defaults write -g AppleShowAllFiles -bool true
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
