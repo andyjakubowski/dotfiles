@@ -5,7 +5,7 @@ echo 'Hello from .zshrc'
 export BAT_THEME="GitHub"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export NULLCMD=bat
-
+export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 
 # Change ZSH Options
 
@@ -16,6 +16,7 @@ alias exa='exa -laFh --git'
 alias trail='<<<${(F)path}'
 alias rm=trash
 alias defaults-domains='defaults domains | tr , \\n'
+alias bbd="brew bundle dump --force --describe"
 
 # Customize Prompt(s)
 PROMPT='
@@ -36,11 +37,6 @@ path=(
 # Write Handy Functions
 function mkcd() {
   mkdir -p "$@" && cd "$_";
-}
-
-# Call bbd from any directory; DOTFILES is set in zshenv
-function bbd() {
-  zsh -c "cd $DOTFILES; brew bundle dump --force --describe" 
 }
 
 
