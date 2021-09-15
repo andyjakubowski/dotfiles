@@ -1,5 +1,5 @@
 export DOTFILES="$HOME/.dotfiles"
-export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
+export HOMEBREW_CASK_OPTS="--no-quarantine"
 export N_PREFIX="$HOME/.n"
 
 function exists() {
