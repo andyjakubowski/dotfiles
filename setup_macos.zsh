@@ -267,6 +267,19 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 101
 /usr/libexec/PlistBuddy -c "Set :UserColumnSortPerTab:0:sort CPUUsage" ~/Library/Preferences/com.apple.ActivityMonitor.plist
 
 ###############################################################################
+# Language & Region                                                           #
+###############################################################################
+
+# Monday is the first day of the week
+defaults write -g AppleFirstWeekday -dict gregorian -int 2
+
+# 12-Hour Clock
+defaults write -g AppleICUForce24HourTime -bool false
+
+# Temperature in Celsius
+defaults write -g AppleTemperatureUnit -string "Celsius"
+
+###############################################################################
 # Other                                                                       #
 ###############################################################################
 
