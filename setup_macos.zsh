@@ -296,6 +296,12 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Stop iTunes from responding to the keyboard media keys
 # launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
+# Disable the [ ] line marks at the beginning and end of each line in Terminal
+defaults write com.apple.Terminal ShowLineMarks -int 0
+
+# Don’t display the confirmation prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
 # Third-Party Software
 
 # iTerm2 Settings
