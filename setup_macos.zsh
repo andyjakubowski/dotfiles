@@ -270,6 +270,12 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 101
 # Other                                                                       #
 ###############################################################################
 
+# Ask to keep changes when closing documents
+defaults write -g NSCloseAlwaysConfirmsChanges -bool true
+
+# Always prefer tabs when opening documents
+defaults write -g AppleWindowTabbingMode -string always
+
 # Adjust toolbar title rollover delay
 defaults write -g NSToolbarTitleViewRolloverDelay -float 0
 
