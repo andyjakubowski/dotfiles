@@ -177,6 +177,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict-add \
 # The position of the Dock on the screen
 defaults write com.apple.dock orientation -string "bottom"
 
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
 # Make dock icons bigger on hover
 # defaults write com.apple.dock magnification -bool true
 
