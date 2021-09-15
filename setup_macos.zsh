@@ -181,7 +181,7 @@ defaults write com.apple.dock orientation -string "bottom"
 # defaults write com.apple.dock magnification -bool true
 
 # Dock icon size
-defaults write com.apple.dock tilesize -int 56
+defaults write com.apple.dock tilesize -int 48
 
 # Dock icon size on hover
 # defaults write com.apple.dock largesize -int 60
