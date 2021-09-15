@@ -40,3 +40,7 @@
       command: ./setup_macos.zsh
       stdout: true
       stderr: true
+    -
+      command: ./setup_links.zsh
+      stdout: true
+      stderr: true
