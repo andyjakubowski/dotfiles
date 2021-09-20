@@ -348,6 +348,9 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
 # defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
 
+###############################################################################
+# Finish Setup                                                                #
+###############################################################################
 
 # Finish macOS Setup
 killall Finder
