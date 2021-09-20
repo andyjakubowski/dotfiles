@@ -318,7 +318,7 @@ defaults write -g KeyRepeat -int 2
 # 15 is the fastest you can get in the GUI
 defaults write -g InitialKeyRepeat -int 15
 
-# Enable full keyboard access for all controlso
+# Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write -g AppleKeyboardUIMode -int 3
 
