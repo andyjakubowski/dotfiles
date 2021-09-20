@@ -1,0 +1,376 @@
+AppleSymbolicHotKeys Mappings
+
+Name
+Default
+ID
+Key combination
+Default parameter 1
+Default parameter 2
+Default parameter 3
+Comments
+
+Turn Dock Hiding On/Off
+enabled
+52
+Option-Command-D
+100
+2
+1572864
+None
+
+Show Launchpad
+disabled
+160
+None
+65535
+65535
+0
+None
+
+Decrease display brightness
+enabled
+53
+fn-F14
+65535
+107
+8388608
+Key combination does change parameters
+
+Decrease display brightness
+enabled
+55
+fn-F14
+65535
+107
+8912896
+Key combination doesn't change these parameters (dedicated Apple keyboard key?)
+
+Increase display brightness
+enabled
+54
+fn-F15
+65535
+113
+8388608
+Key combination does change parameters
+
+Increase display brightness
+enabled
+56
+fn-F15
+65535
+113
+8912896
+Key combination doesn't change these parameters (dedicated Apple keyboard key?)
+
+Mission Control
+enabled
+32
+Control-UpArrow
+65535
+126
+8650752
+Key combination does change parameters
+
+Mission Control
+enabled
+34
+Control-UpArrow
+65535
+126
+8781824
+Key combination doesn't change these parameters (dedicated Apple keyboard key?)
+
+Show Notification Center
+disabled
+163
+None
+65535
+65535
+0
+None
+
+Turn Do Not Disturb On/Off
+disabled
+175
+None
+65535
+65535
+0
+None
+
+Application windows
+enabled
+35
+Control-DownArrow
+65535
+125
+8781824
+None
+
+Show Desktop
+enabled
+36
+fn-F11
+65535
+103
+8388608
+Key combination does change parameters
+
+Show Desktop
+enabled
+37
+fn-F11
+65535
+103
+8519680
+Key combination doesn't change these parameters (dedicated Apple keyboard key?)
+
+Move left a space
+enabled
+79
+Control-LeftArrow
+65535
+123
+8650752
+Key combination does change parameters
+
+Move left a space
+enabled
+80
+Control-LeftArrow
+65535
+123
+8781824
+Key combination doesn't change these parameters (dedicated Apple keyboard key?)
+
+Move right a space
+enabled
+81
+Control-RightArrow
+65535
+124
+8650752
+Key combination does change parameters
+
+Move right a space
+enabled
+82
+Control-RightArrow
+65535
+124
+8781824
+Key combination doesn't change these parameters (dedicated Apple keyboard key?)
+
+Switch to Desktop 1
+enabled
+118
+Control-1
+65535
+18
+262144
+None
+
+Switch to Desktop 2
+enabled
+119
+Control-2
+65535
+19
+262144
+None
+
+Switch to Desktop 3
+enabled
+120
+Control-3
+65535
+20
+262144
+None
+
+Change the way Tab moves focus
+enabled
+13
+Control-fn-F7
+65535
+98
+8650752
+None
+
+Turn keyboard access on or off
+enabled
+12
+Control-fn-F1
+65535
+122
+8650752
+None
+
+Move focus to the menu bar
+enabled
+7
+Control-fn-F2
+65535
+120
+8650752
+None
+
+Move focus to the Dock
+enabled
+8
+Control-fn-F3
+65535
+99
+8650752
+None
+
+Move focus to active or next window
+enabled
+9
+Control-fn-F4
+65535
+118
+8650752
+None
+
+Move focus to the window toolbar
+enabled
+10
+Control-fn-F5
+65535
+96
+8650752
+None
+
+Move focus to the floating window
+enabled
+11
+Control-fn-F6
+65535
+97
+8650752
+None
+
+Move focus to next window
+enabled
+27
+Command-`
+96
+50
+1048576
+None
+
+Move focus to the window drawer
+enabled
+51
+Option-Command-'
+39
+39
+1572864
+Parameter 1 was 39, later changed to 96...
+
+Move focus to status menus
+enabled
+57
+Control-fn-F8
+65535
+100
+8650752
+None
+
+Save picture of screen as a file
+enabled
+28
+Shift-Command-3
+51
+20
+1179648
+None
+
+Copy picture of screen to the clipboard
+enabled
+29
+Control-Shift-Command-3
+51
+20
+1441792
+None
+
+Show Spotlight search
+enabled
+64
+Command-Space bar
+32
+49
+1048576
+None
+
+Name
+Default
+ID
+Key combination
+Default parameter 1 (ASCII code, or 65535 - hex 0xFFFF)
+Default parameter 2 (macOS key code)
+Default parameter 3
+Comments
+
+
+ASCII
+https://theasciicode.com.ar
+https://www.asciitable.com
+
+65635 - hex 0xFFFF
+(16^3)*15+(16^2)*15+(16^1)*15+(16^0)*15 = 65635
+
+
+Key codes
+$ bat /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
+https://manytricks.com/keycodes/
+http://web.archive.org/web/20100501161453/http://www.classicteck.com/rbarticles/mackeyboard.php
+
+
+Modifier keys
+https://web.archive.org/web/20141112224103/http://hintsforums.macworld.com/showthread.php?t=114785
+https://stackoverflow.com/questions/21878482/what-do-the-parameter-values-in-applesymbolichotkeys-plist-dict-represent
+https://opensource.apple.com/source/IOHIDFamily/IOHIDFamily-1090.220.12/IOHIDSystem/IOKit/hidsystem/IOLLEvent.h.auto.html
+https://onlinehextools.com/or-hex-numbers
+https://en.wikipedia.org/wiki/Bitwise_operation#OR
+the sum of the control, command, shift and option keys. these are bits 17-20 in binary: shift is bit 17, control is bit 18, option is bit 19, and command is bit 20.
+- decimal representation of a bitwise-ORs of the below values
+
+NX_ALPHASHIFTMASK	            0x00 010 000
+NX_SHIFTMASK		            0x00 020 000  (Shift)
+NX_CONTROLMASK		            0x00 040 000  (Control)
+NX_ALTERNATEMASK	            0x00 080 000  (Option, built-in Mac keyboard keys)
+NX_COMMANDMASK		            0x00 100 000  (Command)
+NX_NUMERICPADMASK               0x00 200 000
+NX_HELPMASK                     0x00 400 000
+NX_SECONDARYFNMASK              0x00 800 000  (function key)
+NX_ALPHASHIFT_STATELESS_MASK    0x01 000 000
+
+Mission Control
+
+Control-Arrow
+Arrow = NX_SECONDARYFNMASK + NX_CONTROLMASK = 0x00 840 000
+8650752
+                                0x00 840 000
+(16^5)*8 + (16^4)*4 + (16^3)*0 + (16^2)*0 + (16^1)*0 + (16^0)*0
+
+Dedicated Mac Key (e.g. Mission Control)
+NX_SECONDARYFNMASK + NX_CONTROLMASK + NX_SHIFTMASK = 0x00 860 000
+                                0x00 860 000
+8781824
+(16^5)*8 + (16^4)*6 + (16^3)*0 + (16^2)*0 + (16^1)*0 + (16^0)*0
+
+
+Dedicated "Decrease display brightness" key
+NX_SECONDARYFNMASK + NX_ALTERNATEMASK
+8912896
+0x00 880 000
+(16^5)*8 + (16^4)*8 + (16^3)*0 + (16^2)*0 + (16^1)*0 + (16^0)*0
+
+
+
+
+(16^5)*0 + (16^4)*0 + (16^3)*0 + (16^2)*0 + (16^1)*0 + (16^0)*0
