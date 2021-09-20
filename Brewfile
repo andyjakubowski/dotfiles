@@ -1,3 +1,4 @@
+tap "andyjakubowski/software"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -62,7 +63,7 @@ cask "postico"
 # Block your own access to distracting websites
 cask "selfcontrol"
 # Digital design and prototyping platform
-cask "sketch"
+cask "sketch74"
 # Video chat, voice call and instant messaging application
 cask "skype"
 # Music streaming service
