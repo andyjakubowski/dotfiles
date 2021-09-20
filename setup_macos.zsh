@@ -349,6 +349,24 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
 
 ###############################################################################
+# Input Sources                                                               #
+###############################################################################
+
+# Add Polish to the list of preferred languages
+defaults write .GlobalPreferences_m AppleLanguages -array-add -string pl-US
+defaults write -g AppleLanguages -array-add -string pl-US
+
+# Add Polish - Pro as an input source
+/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0 dict" ~/Library/Preferences/com.apple.HIToolbox.plist
+/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:InputSourceKind string 'Keyboard Layout'" ~/Library/Preferences/com.apple.HIToolbox.plist
+/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:'KeyboardLayout ID' integer 30788" ~/Library/Preferences/com.apple.HIToolbox.plist
+/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:'KeyboardLayout Name' string 'Polish Pro'" ~/Library/Preferences/com.apple.HIToolbox.plist
+
+# Show Input menu in menu bar
+defaults write com.apple.TextInputMenu visible -bool true
+defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -bool true
+
+###############################################################################
 # Finish Setup                                                                #
 ###############################################################################
 
