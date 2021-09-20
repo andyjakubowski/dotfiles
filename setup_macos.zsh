@@ -370,6 +370,37 @@ defaults write com.apple.TextInputMenu visible -bool true
 defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -bool true
 
 ###############################################################################
+# Keyboard Shortcuts - macOS                                                  #
+###############################################################################
+
+# Disable "Turn Dock Hiding On/Off"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:52:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+# Disable "Show Spotlight search"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:64:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+# Disable "Move focus to the Dock"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:8:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+# Disable "Move focus to active or next window"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:9:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+# Disable "Move focus to the window toolbar"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:10:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+# Disable "Move focus to the floating window"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:11:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+# Disable "Select the previous input source"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:60:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+# Disable "Save picture of the Touch Bar as a file"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:181:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+# Disable "Copy picture of the Touch Bar to the clipboard"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:182:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+###############################################################################
 # Finish Setup                                                                #
 ###############################################################################
 
