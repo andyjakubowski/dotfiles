@@ -341,6 +341,9 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 # Don’t display the confirmation prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+# Show function keys in Touch Bar instead of app controls in Visual Studio Code
+defaults write com.apple.touchbar.agent PresentationModePerApp -dict-add com.microsoft.VSCode -string functionKeys
+
 # Third-Party Software
 
 # iTerm2 Settings
