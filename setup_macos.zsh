@@ -380,6 +380,11 @@ defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -bool 
 # Keyboard Shortcuts - macOS                                                  #
 ###############################################################################
 
+# System keyboard shortcuts are encoded with ASCII codes, key codes, and decimal representations of bitwise ORs of modifier key masks
+# https://theasciicode.com.ar
+# https://manytricks.com/keycodes/
+# https://opensource.apple.com/source/IOHIDFamily/IOHIDFamily-1090.220.12/IOHIDSystem/IOKit/hidsystem/IOLLEvent.h.auto.html
+
 # Disable "Turn Dock Hiding On/Off"
 /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:52:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
