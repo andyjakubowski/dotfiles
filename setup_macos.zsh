@@ -358,15 +358,19 @@ defaults write com.apple.touchbar.agent PresentationModePerApp -dict-add com.mic
 # Input Sources                                                               #
 ###############################################################################
 
-# Add Polish to the list of preferred languages
-defaults write .GlobalPreferences_m AppleLanguages -array-add -string pl-US
-defaults write -g AppleLanguages -array-add -string pl-US
+# Add US English and Polish to the list of preferred languages
+if ! defaults read -g AppleLanguages | grep -i pl 1>/dev/null 2>&1; then
+    defaults write -g AppleLanguages -array-add -string pl-US
+fi
+# defaults write .GlobalPreferences_m AppleLanguages -array -string en-US -string pl-US
 
-# Add Polish - Pro as an input source
-/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0 dict" ~/Library/Preferences/com.apple.HIToolbox.plist
-/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:InputSourceKind string 'Keyboard Layout'" ~/Library/Preferences/com.apple.HIToolbox.plist
-/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:'KeyboardLayout ID' integer 30788" ~/Library/Preferences/com.apple.HIToolbox.plist
-/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:'KeyboardLayout Name' string 'Polish Pro'" ~/Library/Preferences/com.apple.HIToolbox.plist
+# Add Polish - Pro as an input source if it's not in the list of input sources
+if ! defaults read com.apple.HIToolbox AppleEnabledInputSources | grep 'Polish Pro' 1>/dev/null 2>&1; then
+    /usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0 dict" ~/Library/Preferences/com.apple.HIToolbox.plist
+    /usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:InputSourceKind string 'Keyboard Layout'" ~/Library/Preferences/com.apple.HIToolbox.plist
+    /usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:'KeyboardLayout ID' integer 30788" ~/Library/Preferences/com.apple.HIToolbox.plist
+    /usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:'KeyboardLayout Name' string 'Polish Pro'" ~/Library/Preferences/com.apple.HIToolbox.plist
+fi
 
 # Show Input menu in menu bar
 defaults write com.apple.TextInputMenu visible -bool true
@@ -402,6 +406,16 @@ defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -bool 
 
 # Disable "Copy picture of the Touch Bar to the clipboard"
 /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:182:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+###############################################################################
+# Keyboard Shortcuts - 3rd party apps                                         #
+###############################################################################
+
+# Add items to the list of apps accepting keyboard shortcuts
+plistbuddy -c "Add :com.apple.custommenu.apps string com.bohemiancoding.sketch3" ~/Library/Preferences/com.apple.universalaccess.plist 1>/dev/null 2>&1
+
+# Sketch - Mask with Selected Shape
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add 'Mask with Selected Shape' -string '@$m'
 
 ###############################################################################
 # Finish Setup                                                                #
