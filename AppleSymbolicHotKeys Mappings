@@ -306,6 +306,33 @@ Command-Space bar
 1048576
 None
 
+Select the previous input source
+enabled
+60
+Control-Space bar
+32
+49
+262144
+Only visible if you have more than one input source set
+
+Save picture of the Touch Bar as a file
+enabled
+181
+Shift-Command-6
+54
+22
+1179648
+None
+
+Copy picture of the Touch Bar to the clipboard
+enabled
+182
+Control-Shift-Command-6
+54
+22
+1441792
+None
+
 Name
 Default
 ID
