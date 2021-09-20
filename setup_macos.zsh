@@ -283,6 +283,9 @@ defaults write -g AppleTemperatureUnit -string "Celsius"
 # Other                                                                       #
 ###############################################################################
 
+# When switching apps, switch to a Space with open windows for the app
+defaults write -g AppleSpacesSwitchOnActivate -bool true
+
 # Ask to keep changes when closing documents
 defaults write -g NSCloseAlwaysConfirmsChanges -bool true
 
