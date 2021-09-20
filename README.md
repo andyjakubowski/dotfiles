@@ -5,7 +5,7 @@
 - Safari > Debug > Tab Ordering > Position of New Tabs > After Last Tab
 
 ### Alfred
-
+https://www.alfredapp.com/help/getting-started/migration/
 1. `System Preferences > Keyboard > Shortcuts > Spotlight > Show Spotlight search (cmd+space)` uncheck.
 2. `Alfred Preferences > Powerpack` add License.
 3. `Alfred Preferences > General > Request Permissions`.
