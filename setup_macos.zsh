@@ -487,6 +487,19 @@ defaults write com.ideasoncanvas.mindnode.macos NSUserKeyEquivalents -dict-add '
 defaults write com.ideasoncanvas.mindnode.macos NSUserKeyEquivalents -dict-add 'Zoom Out' -string '@-'
 
 ###############################################################################
+# Divvy                                                                       #
+###############################################################################
+
+defaults write com.mizage.Divvy defaultRowCount -int 4
+defaults write com.mizage.Divvy defaultColumnCount -int 10
+defaults write com.mizage.Divvy enableAnimations -bool false
+defaults write com.mizage.Divvy globalHotkey -dict keyCode -int 2 modifiers -int 768
+defaults write com.mizage.Divvy showMenuIcon -bool false
+defaults write com.mizage.Divvy showResizePreview -bool false
+defaults write com.mizage.Divvy useDefaultGrid -bool true
+defaults write com.mizage.Divvy useGlobalHotkey -bool true
+
+###############################################################################
 # Finish Setup                                                                #
 ###############################################################################
 
