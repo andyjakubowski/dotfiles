@@ -12,6 +12,11 @@
 
 - Safari > Debug > Tab Ordering > Position of New Tabs > After Last Tab
 
+### Visual Studio Code
+
+1. Turn on Settings Sync, and wait for it to finish
+2. Activate Wallaby license
+
 ### Pomodoro
 
 1. Copy `~/Dropbox/Pomodoro/Pomodoro.app` to `/Applications`.
