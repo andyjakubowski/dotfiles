@@ -169,6 +169,13 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict-add \
 	Preview -bool false
 
 ###############################################################################
+# Menu Bar                                                                    #
+###############################################################################
+
+defaults write com.apple.controlcenter "NSStatusItem Visible Sound" -bool true
+defaults write com.apple.controlcenter "NSStatusItem Visible Bluetooth" -bool true
+
+###############################################################################
 # Dock                                                                        #
 ###############################################################################
 
