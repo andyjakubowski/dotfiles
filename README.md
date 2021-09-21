@@ -4,6 +4,11 @@
 
 - Safari > Debug > Tab Ordering > Position of New Tabs > After Last Tab
 
+### Dropbox
+
+1. Log in.
+2. Wait until all files have synced.
+
 ### Alfred
 https://www.alfredapp.com/help/getting-started/migration/
 1. `System Preferences > Keyboard > Shortcuts > Spotlight > Show Spotlight search (cmd+space)` uncheck.
