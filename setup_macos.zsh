@@ -500,6 +500,28 @@ defaults write com.mizage.Divvy useDefaultGrid -bool true
 defaults write com.mizage.Divvy useGlobalHotkey -bool true
 
 ###############################################################################
+# Pomodoro                                                                    #
+###############################################################################
+
+defaults write com.ugolandini.Pomodoro longbreakEnabled -bool false
+defaults write com.ugolandini.Pomodoro tickAtBreakEnabled -bool false
+defaults write com.ugolandini.Pomodoro tickEnabled -bool false
+defaults write com.ugolandini.Pomodoro speechAtBreakFinishedEnabled -bool false
+defaults write com.ugolandini.Pomodoro speechAtEndEnabled -bool false
+defaults write com.ugolandini.Pomodoro initialTime -int 23
+defaults write com.ugolandini.Pomodoro ringVolume -float 20.0
+defaults write com.ugolandini.Pomodoro ringBreakVolume -float 20.0
+defaults write com.ugolandini.Pomodoro globalStartDate -date 2017-02-14T12:00:00Z
+defaults write com.ugolandini.Pomodoro pomodoroName -string "Enter Pomodoro name"
+defaults write com.ugolandini.Pomodoro showSplashScreenAtStartup -bool false
+defaults write com.ugolandini.Pomodoro globalPomodoroStarted -int 8602
+defaults write com.ugolandini.Pomodoro globalPomodoroDone -int 8225
+defaults write com.ugolandini.Pomodoro globalPomodoroReset -int 329
+defaults write com.ugolandini.Pomodoro globalInternalInterruptions -int 88
+defaults write com.ugolandini.Pomodoro globalExternalInterruptions -int 18
+defaults write com.ugolandini.Pomodoro globalPomodoroResumed -int 95
+
+###############################################################################
 # Finish Setup                                                                #
 ###############################################################################
 

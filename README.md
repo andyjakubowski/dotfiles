@@ -1,8 +1,23 @@
 # dotfiles
 
+## Decommission Computer
+
+### Pomodoro
+
+1. Back up the `~/Library/Application Support/Pomodoro` directory, which holds an SQL log of all past pomodoros.
+2. `Pomodoro Stats > Log`, Export as text file, for good measure.
+3. Back up global and local stats keys from `com.ugolandini.Pomodoro` into this repo. Otherwise, old stats will be applied when the installation script runs.
+
 ## Things you have to do manually
 
 - Safari > Debug > Tab Ordering > Position of New Tabs > After Last Tab
+
+### Pomodoro
+
+1. Copy `~/Dropbox/Pomodoro/Pomodoro.app` to `/Applications`.
+2. Copy the contents of `~/Dropbox/Pomodoro/Log` to `~/Library/Application Support/Pomodoro`.
+
+Remember the *new pomodoro* keyboard shortcut: `Control-Option-Command-UpArrow`.
 
 ### Dropbox
 
