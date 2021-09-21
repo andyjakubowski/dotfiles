@@ -549,6 +549,24 @@ defaults write net.notational.velocity UseSoftTabs -bool true
 # /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string 'CFB5FD96-06B6-4A0D-933B-09D76359C544'" ~/Library/Preferences/net.notational.velocity.plist
 
 ###############################################################################
+# Things                                                                      #
+###############################################################################
+
+# Things is a sandboxed app
+# Just like with Safari, the process executing these commands will need Full Disk Access to circumvent Apple’s System Integrity Protocol
+# If you already granted permissions for Safari above, this shouldn’t need any additional work
+# If you’re copying and pasting this code, look at the handling of permissions with Safari
+
+# Don’t show the onboarding
+defaults write com.culturedcode.ThingsMac OnboardingDidComplete -bool true
+# Show Calendar Events in Today and Upcoming lists
+defaults write com.culturedcode.ThingsMac AppleEventsEnabled -bool true
+# Disable the quick todo entry shortcut
+defaults write com.culturedcode.ThingsMac QuickEntryEnabled -bool false
+# Hide the Dock badge
+defaults write com.culturedcode.ThingsMac CCDockCountType -int 0
+
+###############################################################################
 # Finish Setup                                                                #
 ###############################################################################
 

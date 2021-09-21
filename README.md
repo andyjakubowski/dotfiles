@@ -55,6 +55,10 @@ Potential AppleScript automation:
 1. `Notational Velocity Preferences > Notes > Read notes from folder...`, set to `~/Dropbox/Notational Velocity`.
 2. Automatically setting bookmarks using `defaults` doesn’t seem to work — you’ll need to do it manually.
 
+### Things
+
+1. `Things Preferences > Things Cloud`, log in.
+
 ## Todo
 
 - set up Network Link Conditioner
