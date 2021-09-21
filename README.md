@@ -50,6 +50,11 @@ Potential AppleScript automation:
 - https://apple.stackexchange.com/questions/422165/applescript-system-preferences-automation
 - https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html
 
+### Notational Velocity
+
+1. `Notational Velocity Preferences > Notes > Read notes from folder...`, set to `~/Dropbox/Notational Velocity`.
+2. Automatically setting bookmarks using `defaults` doesn’t seem to work — you’ll need to do it manually.
+
 ## Todo
 
 - set up Network Link Conditioner

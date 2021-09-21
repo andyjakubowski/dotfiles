@@ -522,6 +522,33 @@ defaults write com.ugolandini.Pomodoro globalExternalInterruptions -int 18
 defaults write com.ugolandini.Pomodoro globalPomodoroResumed -int 95
 
 ###############################################################################
+# Notational Velocity                                                         #
+###############################################################################
+
+defaults write net.notational.velocity CheckSpellingInNoteBody -bool false
+defaults write net.notational.velocity UseSoftTabs -bool true
+# defaults delete net.notational.velocity Bookmarks
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks array" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0 dict" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string 'F73432D4-B342-4943-B875-F1F1004DB883'" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0 dict" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string '0918ABB4-7AAE-4200-84E0-00934F9AAFB4'" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0 dict" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string '533A9111-E686-492C-999B-42B6C25C0A26'" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0 dict" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string '5EE34910-BE5D-4A38-810F-7672F03E69B3'" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0 dict" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string '3A9FE800-6514-4E75-974B-16097192CE03'" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0 dict" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string '8F28B3DE-5840-4F4E-B085-24D27E84A3ED'" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0 dict" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string 'D8E8305D-2E41-4785-8008-1FB4F228521F'" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0 dict" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string 'FCFD947B-F6EB-446B-8530-A52B84421CE3'" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0 dict" ~/Library/Preferences/net.notational.velocity.plist
+# /usr/libexec/PlistBuddy -c "Add :Bookmarks:0:NoteUUIDString string 'CFB5FD96-06B6-4A0D-933B-09D76359C544'" ~/Library/Preferences/net.notational.velocity.plist
+
+###############################################################################
 # Finish Setup                                                                #
 ###############################################################################
 
