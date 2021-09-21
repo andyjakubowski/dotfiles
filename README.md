@@ -10,7 +10,12 @@ https://www.alfredapp.com/help/getting-started/migration/
 2. `Alfred Preferences > Powerpack` add License.
 3. `Alfred Preferences > General > Request Permissions`.
 4. `Alfred Preferences > General > Alfred Hotkey` change to `cmd+space`.
-5. `Alfred Preferences > Advanced > Set preferences folder` and set to `~/Dropbox/dotfiles/Alfred`.
+5. `Alfred Preferences > Advanced > Set preferences folder` and set to `~/Dropbox/Alfred`.
+
+### Dash
+
+1. `Dash Preferences > Purchase` add license from `~/Dropbox/Dash`.
+2. `Dash Preferences > General > Set up syncing...` and set to `~/Dropbox/Dash`.
 
 ### Menu bar icons
 
