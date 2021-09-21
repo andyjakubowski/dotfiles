@@ -359,13 +359,13 @@ defaults write com.apple.touchbar.agent PresentationModePerApp -dict-add com.mic
 ###############################################################################
 
 # Add US English and Polish to the list of preferred languages
-if ! defaults read -g AppleLanguages | grep -i pl 1>/dev/null 2>&1; then
+if ! defaults read -g AppleLanguages | grep -i --silent pl; then
     defaults write -g AppleLanguages -array-add -string pl-US
 fi
 # defaults write .GlobalPreferences_m AppleLanguages -array -string en-US -string pl-US
 
 # Add Polish - Pro as an input source if it's not in the list of input sources
-if ! defaults read com.apple.HIToolbox AppleEnabledInputSources | grep 'Polish Pro' 1>/dev/null 2>&1; then
+if ! defaults read com.apple.HIToolbox AppleEnabledInputSources | grep --silent 'Polish Pro'; then
     /usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0 dict" ~/Library/Preferences/com.apple.HIToolbox.plist
     /usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:InputSourceKind string 'Keyboard Layout'" ~/Library/Preferences/com.apple.HIToolbox.plist
     /usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:0:'KeyboardLayout ID' integer 30788" ~/Library/Preferences/com.apple.HIToolbox.plist
