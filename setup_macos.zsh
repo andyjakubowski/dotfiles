@@ -416,11 +416,72 @@ defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -bool 
 # Keyboard Shortcuts - 3rd party apps                                         #
 ###############################################################################
 
-# Add items to the list of apps accepting keyboard shortcuts
-plistbuddy -c "Add :com.apple.custommenu.apps string com.bohemiancoding.sketch3" ~/Library/Preferences/com.apple.universalaccess.plist 1>/dev/null 2>&1
+# @ Command
+# $ Shift
+# ~ Option
+# ^ Control 
+# Example: "@~K" is Command-Option-K
 
-# Sketch - Mask with Selected Shape
+# ↑ U+2191
+# ↓ U+2193
+# ← U+2190
+# → U+2192
+# https://unicode-table.com/en/#003E
+
+
+# Sketch
+
+# Add Sketch to the list of apps accepting keyboard shortcuts
+if ! defaults read com.apple.universalaccess com.apple.custommenu.apps | grep -i --silent bohemiancoding.sketch3; then
+    defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add -string com.bohemiancoding.sketch3
+fi
+
 defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add 'Mask with Selected Shape' -string '@$m'
+# Wrapping Arrange->Align->Top in single quotes only causes a parsing error. Additionally wrapping it in double quotes works fine — no idea why...
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add "'Arrange->Align->Top'" -string '@^↑'
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add "'Arrange->Align->Bottom'" -string '@^↓'
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add "'Arrange->Align->Left'" -string '@^←'
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add "'Arrange->Align->Right'" -string '@^→'
+# Technically Arrange->Align->Vertically, but that doesn’t overwrite the default shortcut. A single word shortcut does; not sure why
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add 'Vertically' -string '$@y'
+# Technically Arrange->Align->Horizontally, but that doesn’t overwrite the default shortcut. A single word shortcut does; not sure why
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add 'Horizontally' -string '$@x'
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add 'Make Grid' -string '$@a'
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add "'Canvas->Layout Settings...'" -string '$@n'
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add "'Combine->Flatten'" -string '$@f'
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add 'Copy SVG Code' -string '$@s'
+defaults write com.bohemiancoding.sketch3 NSUserKeyEquivalents -dict-add 'Detach from Symbol' -string '$@w'
+
+# Safari
+
+# Add Safari to the list of apps accepting keyboard shortcuts
+if ! defaults read com.apple.universalaccess com.apple.custommenu.apps | grep -i --silent com.apple.Safari; then
+    defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add -string com.apple.Safari
+fi
+
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Export as PDF...' -string '$@s'
+
+# Mail
+
+# Add Mail to the list of apps accepting keyboard shortcuts
+if ! defaults read com.apple.universalaccess com.apple.custommenu.apps | grep -i --silent com.apple.mail; then
+    defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add -string com.apple.mail
+fi
+
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add 'Save As...' -string '$@s'
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add 'Send' -string '$@s'
+
+# MindNode
+
+# Add MindNode to the list of apps accepting keyboard shortcuts
+if ! defaults read com.apple.universalaccess com.apple.custommenu.apps | grep -i --silent com.ideasoncanvas.mindnode.macos; then
+    defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add -string com.ideasoncanvas.mindnode.macos
+fi
+
+defaults write com.ideasoncanvas.mindnode.macos NSUserKeyEquivalents -dict-add 'Zoom to Selection' -string '@2'
+defaults write com.ideasoncanvas.mindnode.macos NSUserKeyEquivalents -dict-add 'Zoom In' -string '@='
+defaults write com.ideasoncanvas.mindnode.macos NSUserKeyEquivalents -dict-add 'Zoom to Fit' -string '@1'
+defaults write com.ideasoncanvas.mindnode.macos NSUserKeyEquivalents -dict-add 'Zoom Out' -string '@-'
 
 ###############################################################################
 # Finish Setup                                                                #
