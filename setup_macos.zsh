@@ -283,6 +283,9 @@ defaults write -g AppleTemperatureUnit -string "Celsius"
 # Other                                                                       #
 ###############################################################################
 
+# Disable System Preferences > General > Close windows when quitting an app
+defaults write -g NSQuitAlwaysKeepsWindows -bool true
+
 # Allow repeated calls when Do Not Disturb is turned on
 defaults write com.apple.messages.facetime FaceTimeTwoTimeCallthroughEnabled -bool true
 
