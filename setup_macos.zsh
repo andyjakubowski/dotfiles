@@ -578,6 +578,7 @@ defaults write com.culturedcode.ThingsMac CCDockCountType -int 0
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
 defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
+defaults write com.googlecode.iterm2 "NoSyncNeverRemindPrefsChangesLostForFile_selection" -int 2
 
 ###############################################################################
 # Finish Setup                                                                #
