@@ -114,6 +114,10 @@ Potential AppleScript automation:
 1. `Boostnote Preferences > Storage`, click Unlink next to the default storage location.
 2. `Boostnote Preferences > Storage`, click _Add Storage Location_, set to `~/Dropbox/Boostnote`.
 
+### Divvy
+
+1. `Divvy Preferences > Start Divvy at login`, check.
+
 ## Todo
 
 - set up Network Link Conditioner
