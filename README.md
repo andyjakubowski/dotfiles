@@ -22,7 +22,7 @@
 1. Copy `~/Dropbox/Pomodoro/Pomodoro.app` to `/Applications`.
 2. Copy the contents of `~/Dropbox/Pomodoro/Log` to `~/Library/Application Support/Pomodoro`.
 
-Remember the *new pomodoro* keyboard shortcut: `Control-Option-Command-UpArrow`.
+Remember the _new pomodoro_ keyboard shortcut: `Control-Option-Command-UpArrow`.
 
 ### Dropbox
 
@@ -30,7 +30,9 @@ Remember the *new pomodoro* keyboard shortcut: `Control-Option-Command-UpArrow`.
 2. Wait until all files have synced.
 
 ### Alfred
+
 https://www.alfredapp.com/help/getting-started/migration/
+
 1. `System Preferences > Keyboard > Shortcuts > Spotlight > Show Spotlight search (cmd+space)` uncheck.
 2. `Alfred Preferences > Powerpack` add License.
 3. `Alfred Preferences > General > Request Permissions`.
@@ -50,6 +52,7 @@ Because setting these via `defaults` doesn’t seem to work in Big Sur, you need
 2. `System Preferences > Bluetooth > Show volume in menu bar` check.
 
 Potential AppleScript automation:
+
 - https://macscripter.net/viewtopic.php?id=46820
 - https://latenightsw.com/big-sur/
 - https://apple.stackexchange.com/questions/422165/applescript-system-preferences-automation
