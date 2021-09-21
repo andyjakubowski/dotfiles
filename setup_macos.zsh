@@ -292,6 +292,9 @@ defaults write -g AppleTemperatureUnit -string "Celsius"
 # Other                                                                       #
 ###############################################################################
 
+# Allow repeated calls when Do Not Disturb is turned on
+defaults write com.apple.messages.facetime FaceTimeTwoTimeCallthroughEnabled -bool true
+
 # When switching apps, switch to a Space with open windows for the app
 defaults write -g AppleSpacesSwitchOnActivate -bool true
 
