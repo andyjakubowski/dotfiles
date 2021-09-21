@@ -482,6 +482,15 @@ defaults write com.ideasoncanvas.mindnode.macos NSUserKeyEquivalents -dict-add '
 defaults write com.ideasoncanvas.mindnode.macos NSUserKeyEquivalents -dict-add 'Zoom to Fit' -string '@1'
 defaults write com.ideasoncanvas.mindnode.macos NSUserKeyEquivalents -dict-add 'Zoom Out' -string '@-'
 
+# iTerm
+
+# Add iTerm to the list of apps accepting keyboard shortcuts
+if ! defaults read com.apple.universalaccess com.apple.custommenu.apps | grep -i --silent com.googlecode.iterm2; then
+    defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add -string com.googlecode.iterm2
+fi
+
+defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add "\033Shell\033Split Horizontally with Current Profile" -string '@^d'
+
 ###############################################################################
 # Divvy                                                                       #
 ###############################################################################
