@@ -329,7 +329,7 @@ defaults write -g InitialKeyRepeat -int 15
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
-defaults write -g AppleKeyboardUIMode -int 3
+defaults write -g AppleKeyboardUIMode -int 2
 
 # Increase sound quality for Bluetooth headphones/headsets
 # Not sure how this works exactly, keeping it commented out for now
