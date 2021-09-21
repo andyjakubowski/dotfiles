@@ -174,6 +174,8 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict-add \
 
 defaults write com.apple.controlcenter "NSStatusItem Visible Sound" -bool true
 defaults write com.apple.controlcenter "NSStatusItem Visible Bluetooth" -bool true
+defaults delete com.apple.controlcenter "NSStatusItem Visible DoNotDisturb"
+defaults delete com.apple.controlcenter "NSStatusItem Preferred Position Bluetooth"
 
 ###############################################################################
 # Dock                                                                        #
