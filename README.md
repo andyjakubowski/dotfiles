@@ -67,6 +67,12 @@ Potential AppleScript automation:
 
 1. `Things Preferences > Things Cloud`, log in.
 
+### Boostnote
+
+1. `Boostnote Preferences > Storage`, click Unlink next to the default storage location.
+2. `Boostnote Preferences > Storage`, click _Add Storage Location_, set to `~/Dropbox/Boostnote`.
+
 ## Todo
 
 - set up Network Link Conditioner
+- automate font installation
