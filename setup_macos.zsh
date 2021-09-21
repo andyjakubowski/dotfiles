@@ -353,13 +353,6 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # Show function keys in Touch Bar instead of app controls in Visual Studio Code
 defaults write com.apple.touchbar.agent PresentationModePerApp -dict-add com.microsoft.VSCode -string functionKeys
 
-# Third-Party Software
-
-# iTerm2 Settings
-# defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-# defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
-# defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
-
 ###############################################################################
 # Input Sources                                                               #
 ###############################################################################
@@ -568,6 +561,14 @@ defaults write com.culturedcode.ThingsMac AppleEventsEnabled -bool true
 defaults write com.culturedcode.ThingsMac QuickEntryEnabled -bool false
 # Hide the Dock badge
 defaults write com.culturedcode.ThingsMac CCDockCountType -int 0
+
+###############################################################################
+# iTerm 2                                                                     #
+###############################################################################
+
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
+defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile -bool true
 
 ###############################################################################
 # Finish Setup                                                                #
