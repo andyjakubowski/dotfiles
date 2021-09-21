@@ -34,3 +34,7 @@ Potential AppleScript automation:
 - https://latenightsw.com/big-sur/
 - https://apple.stackexchange.com/questions/422165/applescript-system-preferences-automation
 - https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html
+
+## Todo
+
+- set up Network Link Conditioner
