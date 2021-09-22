@@ -118,6 +118,14 @@ Potential AppleScript automation:
 
 1. `Divvy Preferences > Start Divvy at login`, check.
 
+### Login items
+
+- `System Preferences > Users & Groups > Login Items`, make sure the list contains the following:
+  - Divvy
+  - Pomodoro
+  - Alfred 4
+  - Dropbox
+
 ## Todo
 
 - set up Network Link Conditioner
