@@ -390,8 +390,8 @@ defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -bool 
 # Disable "Show Spotlight search"
 /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:64:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
-# Disable "Move focus to the Dock"
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:8:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+# Enable "Move focus to the Dock"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:8:enabled true" ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
 # Disable "Move focus to active or next window"
 /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:9:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
