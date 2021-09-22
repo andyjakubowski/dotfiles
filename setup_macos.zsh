@@ -511,6 +511,7 @@ defaults write com.mizage.Divvy useGlobalHotkey -bool true
 defaults write com.ugolandini.Pomodoro longbreakEnabled -bool false
 defaults write com.ugolandini.Pomodoro tickAtBreakEnabled -bool false
 defaults write com.ugolandini.Pomodoro tickEnabled -bool false
+defaults write com.ugolandini.Pomodoro speechAtStartEnabled -bool false
 defaults write com.ugolandini.Pomodoro speechAtBreakFinishedEnabled -bool false
 defaults write com.ugolandini.Pomodoro speechAtEndEnabled -bool false
 defaults write com.ugolandini.Pomodoro initialTime -int 23
