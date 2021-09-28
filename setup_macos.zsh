@@ -459,6 +459,7 @@ if ! defaults read com.apple.universalaccess com.apple.custommenu.apps | grep -i
 fi
 
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Export as PDF...' -string '$@s'
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Show Reader' -string '~^r'
 
 # Mail
 
