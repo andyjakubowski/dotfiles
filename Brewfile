@@ -1,6 +1,7 @@
 tap "andyjakubowski/software"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -60,6 +61,8 @@ cask "microsoft-edge"
 cask "notational-velocity"
 # GUI client for PostgreSQL databases
 cask "postico"
+# Web browser
+cask "safari-technology-preview"
 # Block your own access to distracting websites
 cask "selfcontrol"
 # Digital design and prototyping platform
@@ -87,6 +90,7 @@ mas "Kindle", id: 405399194
 mas "MindNode", id: 1289197285
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Pomodoro", id: 417574133
 mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
 mas "Things", id: 904280696
