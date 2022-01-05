@@ -22,6 +22,8 @@ brew "n"
 brew "nano"
 # Object-relational database system
 brew "postgresql", restart_service: true
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Simplified and community-driven man pages
 brew "tldr"
 # Display directories as trees (with optional color/HTML output)
@@ -58,6 +60,8 @@ cask "karabiner-elements"
 cask "microsoft-auto-update"
 # Web browser
 cask "microsoft-edge"
+# Free and open-source RSS reader
+cask "netnewswire"
 cask "notational-velocity"
 # GUI client for PostgreSQL databases
 cask "postico"
@@ -91,6 +95,7 @@ mas "MindNode", id: 1289197285
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pomodoro", id: 417574133
+mas "Presentify", id: 1507246666
 mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
 mas "Things", id: 904280696
