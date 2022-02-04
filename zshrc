@@ -33,6 +33,10 @@ path=(
   $path
 )
 
+# Add Homebrew to PATH
+# https://docs.brew.sh/Manpage#shellenv
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 
 # Write Handy Functions
 function mkcd() {

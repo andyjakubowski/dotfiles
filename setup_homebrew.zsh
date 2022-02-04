@@ -7,8 +7,15 @@ if exists brew; then
 else
   echo "brew doesn't exist, continuing with install"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-fi
 
+  # Add Homebrew to PATH if running this script on an ARM macOS
+  OS="$(uname)"
+  UNAME_MACHINE="$(/usr/bin/uname -m)"
+  if [[ "${OS}" == "Darwin" && "${UNAME_MACHINE}" == "arm64" ]]
+  then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
+fi
 
 
 # TODO: Keep an eye out for a different `--no-quarantine` solution.
