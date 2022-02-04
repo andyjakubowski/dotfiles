@@ -20,27 +20,22 @@
       path: config/karabiner
 
 - shell:
-    -
-      command: ./setup_homebrew.zsh
+    - command: ./setup_homebrew.zsh
+      stdin: true
       stdout: true
       stderr: true
-    -
-      command: ./setup_karabiner.zsh
+    - command: ./setup_karabiner.zsh
       stdout: true
       stderr: true
-    -
-      command: ./setup_zsh.zsh
+    - command: ./setup_zsh.zsh
       stdout: true
       stderr: true
-    - 
-      command: ./setup_node.zsh
+    - command: ./setup_node.zsh
       stdout: true
       stderr: true
-    - 
-      command: ./setup_macos.zsh
+    - command: ./setup_macos.zsh
       stdout: true
       stderr: true
-    -
-      command: ./setup_links.zsh
+    - command: ./setup_links.zsh
       stdout: true
       stderr: true
