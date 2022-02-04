@@ -1,12 +1,32 @@
 # dotfiles
 
+I learned about dotfiles from [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz/). The repo for that course is at [https://github.com/eieioxyz/dotfiles_macos](https://github.com/eieioxyz/dotfiles_macos).
+
 ## Decommission Computer
+
+### `brew bundle dump`
+
+You might have installed apps on your Mac that aren’t yet reflected in your dotfiles repo. Run `brew bundle dump` and compare the resulting file with the `Brewfile` in your repo. You can also override the `Brewfile` and `diff` it. There might be apps you don’t want on your new Mac, so make sure you remove those from the `Brewfile`.
 
 ### Pomodoro
 
 1. Back up the `~/Library/Application Support/Pomodoro` directory, which holds an SQL log of all past pomodoros.
 2. `Pomodoro Stats > Log`, Export as text file, for good measure.
-3. Back up global and local stats keys from `com.ugolandini.Pomodoro` into this repo. Otherwise, old stats will be applied when the installation script runs.
+3. Back up global and local stats keys from `com.ugolandini.Pomodoro` into this repo with `defaults read com.ugolandini.Pomodoro > ~/.dotfiles/pomodoro-defaults-dump.txt`. Then, update the `defaults write com.ugolandini.Pomodoro ...` statements in `setup_macos.zsh` with the updated data. This is the one non-idempotent part of this repo, so you’ll have to comment out these statements after the initial install on a new machine to avoid resetting your Pomodoro stats.
+
+### Visual Studio Code
+
+Make sure [Settings Sync]() is turned on, and that you’re syncing all of the following:
+
+- Settings
+- Keyboard Shortcuts for each platform
+- User Snippets
+- Extensions
+- UI State
+
+### Deactivate devices and licenses
+
+- Kindle for Mac > Preferences > General > Deregister
 
 ## Restore Instructions
 
@@ -16,39 +36,39 @@
 4. If necessary, `git checkout <another_branch>`.
 5. Do one last Software Audit by editing [Brewfile](Brewfile) directly.
 6. [`./install`](install)
-7. Restart computer.
-8. Setup up Dropbox (use multifactor authentication!) and allow files to sync before setting up dependent applications. Alfred settings are stored here.
-9. Run `mackup restore`. Consider doing a `mackup restore --dry-run --verbose` first.
+7. Comment out the `defaults write com.ugolandini.Pomodoro ...` statements that reset Pomodoro stats. You only want to do that part once.
+8. Restart computer.
+9. Setup up Dropbox (use multifactor authentication!) and allow files to sync before setting up dependent applications. Alfred settings are stored here.
 10. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh), add to GitHub, and switch remotes.
 
-    ```zsh
-    # Generate SSH key in default location (~/.ssh/config)
-    ssh-keygen -t rsa -b 4096 -C "477212+andyjakubowski@users.noreply.github.com"
+```zsh
+# Generate SSH key in default location (~/.ssh/config)
+ssh-keygen -t rsa -b 4096 -C "477212+andyjakubowski@users.noreply.github.com"
 
-    # Start the ssh-agent
-    eval "$(ssh-agent -s)"
+# Start the ssh-agent
+eval "$(ssh-agent -s)"
 
-    # Create config file with necessary settings
-    << EOF > ~/.ssh/config
-    Host *
-      AddKeysToAgent yes
-      UseKeychain yes
-      IdentityFile ~/.ssh/id_rsa
-    EOF
+# Create config file with necessary settings
+<< EOF > ~/.ssh/config
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+EOF
 
-    # Add private key to ssh-agent
-    ssh-add -K ~/.ssh/id_rsa
+# Add private key to ssh-agent
+ssh-add -K ~/.ssh/id_rsa
 
-    # Copy public key and add to github.com > Settings > SSH and GPG keys
-    pbcopy < ~/.ssh/id_rsa.pub
+# Copy public key and add to github.com > Settings > SSH and GPG keys
+pbcopy < ~/.ssh/id_rsa.pub
 
-    # Test SSH connection, then verify fingerprint and username
-    # https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
-    ssh -T git@github.com
+# Test SSH connection, then verify fingerprint and username
+# https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
+ssh -T git@github.com
 
-    # Switch from HTTPS to SSH
-    git remote set-url origin git@github.com:andyjakubowski/dotfiles.git
-    ```
+# Switch from HTTPS to SSH
+git remote set-url origin git@github.com:andyjakubowski/dotfiles.git
+```
 
 ## Things you have to do manually
 
@@ -130,3 +150,7 @@ Potential AppleScript automation:
 
 - set up Network Link Conditioner
 - automate font installation
+
+## Comments
+
+- The `Brewfile` in this repo installs Sketch 74. Update the `Brewfile` if you need the latest version.
