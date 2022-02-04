@@ -1,5 +1,7 @@
 # dotfiles
 
+My dotfiles for macOS. You could get some of this setup to work on Linux, but you’d have to disable the installation of Homebrew casks, and Mac App Store apps. The setup scripts also include some macOS-only conveniences, like adding Homebrew to PATH on Apple Silicon Macs.
+
 I learned about dotfiles from [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz/). The repo for that course is at [https://github.com/eieioxyz/dotfiles_macos](https://github.com/eieioxyz/dotfiles_macos).
 
 ## Decommission Computer
