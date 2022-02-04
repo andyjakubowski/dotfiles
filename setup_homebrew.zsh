@@ -21,6 +21,10 @@ fi
 # which makes them available to Homebrew for the
 # first install (before our `zshrc` is sourced).
 
+# Manually install mas so we can
+# prompt you to log into the Mac App Store
+brew install mas
+
 # Sign in to App Store
 if ! mas account 1> /dev/null; then
     echo "Please open the App Store app and sign in using your Apple ID..."
@@ -29,4 +33,6 @@ if ! mas account 1> /dev/null; then
     done
 fi
 
+# Install packages, casks, and Mac App Store apps
+# based on the Brewfile in this repo
 brew bundle --verbose
