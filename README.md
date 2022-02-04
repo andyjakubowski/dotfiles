@@ -80,6 +80,10 @@ git remote set-url origin git@github.com:andyjakubowski/dotfiles.git
 
 - Safari > Debug > Tab Ordering > Position of New Tabs > After Last Tab
 
+### Remap Caps Lock to Escape
+
+System Preferences > Keyboard > Modifier Keys...
+
 ### Visual Studio Code
 
 1. Turn on Settings Sync, and wait for it to finish
