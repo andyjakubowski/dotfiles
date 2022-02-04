@@ -98,4 +98,5 @@ mas "Pomodoro", id: 417574133
 mas "Presentify", id: 1507246666
 mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
+mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
