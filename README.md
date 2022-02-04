@@ -32,10 +32,10 @@ Make sure [Settings Sync]() is turned on, and that you’re syncing all of the f
 
 ## Restore Instructions
 
-1. `xcode-select --install` (Command Line Tools are required for Git and Homebrew)
+1. `xcode-select --install`. Running this will prompt the installation of the command line developer tools. Command Line Tools are required for Git and Homebrew. This might take about 15 minutes.
 2. `git clone https://github.com/andyjakubowski/dotfiles.git ~/.dotfiles`. We'll start with `https` but switch to `ssh` after everything is installed.
 3. `cd ~/.dotfiles`
-4. If necessary, `git checkout <another_branch>`.
+4. This repo only has the `main` branch. Some people split their dotfiles repos into separate branching depending on things like the operating system. In that case, `git checkout <another_branch>`.
 5. Do one last Software Audit by editing [Brewfile](Brewfile) directly.
 6. [`./install`](install)
 7. Comment out the `defaults write com.ugolandini.Pomodoro ...` statements that reset Pomodoro stats. You only want to do that part once.
@@ -148,11 +148,26 @@ Potential AppleScript automation:
   - Alfred 4
   - Dropbox
 
-## Todo
+## Resolving issues
 
-- set up Network Link Conditioner
-- automate font installation
+### Aliases
+
+When you run `./install`, files like `zshenv` and `zshrc` will be linked before any software is installed. This means your [Z Shell](https://zsh.sourceforge.io/) will start using certain aliases that are configured in those files. For example: `alias ls='exa -laFh --git'`.
+
+These aliases rely on non-standard software being installed. But if this for whatever reason the software fails to install when you run `./install`, You’ll end up with errors in your terminal like `zsh: command not found: exa`.
+
+Run `where ls` to see the full path to the original, non-aliased `ls`. Then you’d run something like `/bin/ls /bin` instead.
+
+### Apple Silicon
+
+If you’re setting up a new Mac that uses Apple’s CPUs like the M1, you may need to install [Rosetta](https://support.apple.com/en-gb/HT211861) to run software built for Intel Macs.
 
 ## Comments
 
 - The `Brewfile` in this repo installs Sketch 74. Update the `Brewfile` if you need the latest version.
+
+## Todo
+
+- set up Network Link Conditioner
+- automate font installation
+- Fix issue with `nano` on macOS Monterey where nanorc uses `/usr/local/share/nano`, but this path doesn’t seem to exist.
