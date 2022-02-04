@@ -35,8 +35,12 @@ path=(
 
 # Add Homebrew to PATH
 # https://docs.brew.sh/Manpage#shellenv
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
+OS="$(uname)"
+UNAME_MACHINE="$(/usr/bin/uname -m)"
+if [[ "${OS}" == "Darwin" && "${UNAME_MACHINE}" == "arm64" ]]
+then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Write Handy Functions
 function mkcd() {
