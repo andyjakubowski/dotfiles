@@ -39,11 +39,12 @@ Make sure [Settings Sync]() is turned on, and that you’re syncing all of the f
 3. `cd ~/.dotfiles`
 4. This repo only has the `main` branch. Some people split their dotfiles repos into separate branching depending on things like the operating system. In that case, `git checkout <another_branch>`.
 5. Do one last Software Audit by editing [Brewfile](Brewfile) directly.
-6. [`./install`](install)
-7. Comment out the `defaults write com.ugolandini.Pomodoro ...` statements that reset Pomodoro stats. You only want to do that part once.
-8. Restart computer.
-9. Setup up Dropbox (use multifactor authentication!) and allow files to sync before setting up dependent applications. Alfred settings are stored here.
-10. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh), add to GitHub, and switch remotes.
+6. Sign into the Mac App Store.
+7. [`./install`](install)
+8. Comment out the `defaults write com.ugolandini.Pomodoro ...` statements that reset Pomodoro stats. You only want to do that part once.
+9. Restart computer.
+10. Setup up Dropbox (use multifactor authentication!) and allow files to sync before setting up dependent applications. Alfred settings are stored here.
+11. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh), add to GitHub, and switch remotes.
 
 ```zsh
 # Generate SSH key in default location (~/.ssh/config)

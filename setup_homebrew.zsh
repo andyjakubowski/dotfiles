@@ -9,6 +9,7 @@ else
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
   # Add Homebrew to PATH if running this script on an ARM macOS
+  echo "Start another shell session or $ source ~/.zshrc to put Homebrew on your current shell’s PATH."
   OS="$(uname)"
   UNAME_MACHINE="$(/usr/bin/uname -m)"
   if [[ "${OS}" == "Darwin" && "${UNAME_MACHINE}" == "arm64" ]]
@@ -27,18 +28,6 @@ fi
 # `--no-quarantine` and `--no-binaries` options,
 # which makes them available to Homebrew for the
 # first install (before our `zshrc` is sourced).
-
-# Manually install mas so we can
-# prompt you to log into the Mac App Store
-brew install mas
-
-# Sign in to App Store
-if ! mas account 1> /dev/null; then
-    echo "Please open the App Store app and sign in using your Apple ID..."
-    until mas account 1> /dev/null; do
-        sleep 5
-    done
-fi
 
 # Install packages, casks, and Mac App Store apps
 # based on the Brewfile in this repo
