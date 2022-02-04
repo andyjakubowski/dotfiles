@@ -4,6 +4,8 @@ I learned about dotfiles from [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz/). 
 
 ## Decommission Computer
 
+### Commit and push to remote repos
+
 ### `brew bundle dump`
 
 You might have installed apps on your Mac that aren’t yet reflected in your dotfiles repo. Run `brew bundle dump` and compare the resulting file with the `Brewfile` in your repo. You can also override the `Brewfile` and `diff` it. There might be apps you don’t want on your new Mac, so make sure you remove those from the `Brewfile`.
