@@ -44,7 +44,7 @@ Make sure [Settings Sync]() is turned on, and that you’re syncing all of the f
 8. [`./install`](install)
 9. Comment out the `defaults write com.ugolandini.Pomodoro ...` statements that reset Pomodoro stats. You only want to do that part once.
 10. Restart computer.
-11. Setup up Dropbox (use multifactor authentication!) and allow files to sync before setting up dependent applications. Alfred settings are stored here.
+11. Setup up Dropbox (use multifactor authentication!) and allow files to sync before setting up dependent applications. Dependent apps: Alfred, Dash, Pomodoro, Notational Velocity, Boostnote.
 12. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh), add to GitHub, and switch remotes.
 
 ```zsh
@@ -78,16 +78,56 @@ git remote set-url origin git@github.com:andyjakubowski/dotfiles.git
 
 ## Things you have to do manually
 
+### Safari
+
 - Safari > Debug > Tab Ordering > Position of New Tabs > After Last Tab
+- Enable the password manager extension
 
 ### Remap Caps Lock to Escape
 
 System Preferences > Keyboard > Modifier Keys...
 
+### Karabiner Elements
+
+Give the app the permissions it asks for.
+
+### Password manager
+
+- Log in.
+- Enable the Safari extension.
+
+### Dropbox
+
+1. Log in.
+2. Wait until all files have synced.
+
 ### Visual Studio Code
 
 1. Turn on Settings Sync, and wait for it to finish
 2. Activate Wallaby license
+
+### Sound and Bluetooth
+
+Because setting these via `defaults` doesn’t seem to work in Big Sur, you need to do it manually. Or, look into GUI manipulation with AppleScript; that will of course be prone to error if Apple changes the UI of those preference panes.
+
+- `System Preferences > Sound > Sound Effects > Play sound on startup`: uncheck.
+- `System Preferences > Sound > Sound Effects > Show Sound menu bar`: check, set to always.
+- `System Preferences > Bluetooth > Show Bluetooth in menu bar` check.
+
+Potential AppleScript automation:
+
+- https://macscripter.net/viewtopic.php?id=46820
+- https://latenightsw.com/big-sur/
+- https://apple.stackexchange.com/questions/422165/applescript-system-preferences-automation
+- https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html
+
+### Things
+
+1. `Things Preferences > Things Cloud`, log in.
+
+### Divvy
+
+1. `Divvy Preferences > Start Divvy at login`, check.
 
 ### Pomodoro
 
@@ -95,11 +135,6 @@ System Preferences > Keyboard > Modifier Keys...
 2. Copy the contents of `~/Dropbox/Pomodoro/Log` to `~/Library/Application Support/Pomodoro`.
 
 Remember the _new pomodoro_ keyboard shortcut: `Control-Option-Command-UpArrow`.
-
-### Dropbox
-
-1. Log in.
-2. Wait until all files have synced.
 
 ### Alfred
 
@@ -116,37 +151,15 @@ https://www.alfredapp.com/help/getting-started/migration/
 1. `Dash Preferences > Purchase` add license from `~/Dropbox/Dash`.
 2. `Dash Preferences > General > Set up syncing...` and set to `~/Dropbox/Dash`.
 
-### Menu bar icons
-
-Because setting these via `defaults` doesn’t seem to work in Big Sur, you need to do it manually. Or, look into GUI manipulation with AppleScript; that will of course be prone to error if Apple changes the UI of those preference panes.
-
-1. `System Preferences > Sound > Sound Effects > Show volume in menu bar` check.
-2. `System Preferences > Bluetooth > Show volume in menu bar` check.
-
-Potential AppleScript automation:
-
-- https://macscripter.net/viewtopic.php?id=46820
-- https://latenightsw.com/big-sur/
-- https://apple.stackexchange.com/questions/422165/applescript-system-preferences-automation
-- https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html
-
 ### Notational Velocity
 
 1. `Notational Velocity Preferences > Notes > Read notes from folder...`, set to `~/Dropbox/Notational Velocity`.
 2. Automatically setting bookmarks using `defaults` doesn’t seem to work — you’ll need to do it manually.
 
-### Things
-
-1. `Things Preferences > Things Cloud`, log in.
-
 ### Boostnote
 
 1. `Boostnote Preferences > Storage`, click Unlink next to the default storage location.
 2. `Boostnote Preferences > Storage`, click _Add Storage Location_, set to `~/Dropbox/Boostnote`.
-
-### Divvy
-
-1. `Divvy Preferences > Start Divvy at login`, check.
 
 ### Login items
 
