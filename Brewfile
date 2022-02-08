@@ -94,7 +94,6 @@ mas "Kindle", id: 405399194
 mas "MindNode", id: 1289197285
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Pomodoro", id: 417574133
 mas "Presentify", id: 1507246666
 mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
