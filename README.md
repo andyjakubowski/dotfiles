@@ -109,6 +109,7 @@ Give the app the permissions it asks for.
 
 1. Turn on Settings Sync, and wait for it to finish
 2. Activate Wallaby license
+3. Activate Quokka license
 
 ### Sound and Bluetooth
 
