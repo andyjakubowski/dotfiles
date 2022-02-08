@@ -49,7 +49,7 @@ Make sure [Settings Sync]() is turned on, and that you’re syncing all of the f
 
 ```zsh
 # Generate SSH key in default location (~/.ssh/config)
-ssh-keygen -t rsa -b 4096 -C "477212+andyjakubowski@users.noreply.github.com"
+ssh-keygen -t ed25519 -C "477212+andyjakubowski@users.noreply.github.com"
 
 # Start the ssh-agent
 eval "$(ssh-agent -s)"
