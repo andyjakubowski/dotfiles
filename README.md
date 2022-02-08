@@ -59,18 +59,22 @@ eval "$(ssh-agent -s)"
 Host *
   AddKeysToAgent yes
   UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/id_ed25519
 EOF
 
 # Add private key to ssh-agent
-ssh-add -K ~/.ssh/id_rsa
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
-# Copy public key and add to github.com > Settings > SSH and GPG keys
-pbcopy < ~/.ssh/id_rsa.pub
+# Copy public key to your clipboard
+pbcopy < ~/.ssh/id_ed25519.pub
+
+# Add public key to github.com > Settings > SSH and GPG keys > New SSH key
 
 # Test SSH connection, then verify fingerprint and username
 # https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
 ssh -T git@github.com
+
+# Verify the fingerprint you see matches one of these: https://docs.github.com/en/github/authenticating-to-github/githubs-ssh-key-fingerprints
 
 # Switch from HTTPS to SSH
 git remote set-url origin git@github.com:andyjakubowski/dotfiles.git
