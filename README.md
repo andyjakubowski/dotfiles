@@ -93,7 +93,7 @@ System Preferences > Keyboard > Modifier Keys...
 
 ### Karabiner Elements
 
-Give the app the permissions it asks for.
+Give the app the permissions it asks for, so you can start using the external keyboard.
 
 ### Password manager
 
