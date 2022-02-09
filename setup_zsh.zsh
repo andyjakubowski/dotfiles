@@ -17,12 +17,13 @@ else
 fi
 
 # Set Homebrew zsh as the login shell for this user
-if [ "$SHELL" = $(brew --prefix)/bin/zsh ]; then
-  echo \$SHELL is already $(brew --prefix)/bin/zsh
-else
-  echo "Enter user password to change login shell"
-  chsh -s '$(brew --prefix)/bin/zsh'
-fi
+# This doesn’t do anything on macOS Monterey for some reason
+# if [ "$SHELL" = $(brew --prefix)/bin/zsh ]; then
+#   echo \$SHELL is already $(brew --prefix)/bin/zsh
+# else
+#   echo "Enter user password to change login shell"
+#   chsh -s '$(brew --prefix)/bin/zsh'
+# fi
 
 # Make built-in zsh (/bin/zsh) the default non-interactive shell
 # Seems like it's not possible to make Homebrew zsh
