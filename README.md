@@ -197,3 +197,4 @@ If you’re setting up a new Mac that uses Apple’s CPUs like the M1, you may n
 - set up Network Link Conditioner
 - automate font installation
 - Fix issue with `nano` on macOS Monterey where nanorc uses `/usr/local/share/nano`, but this path doesn’t seem to exist.
+- Add config for Safari “Show Develop menu in menu bar”
