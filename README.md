@@ -31,6 +31,7 @@ Make sure [Settings Sync]() is turned on, and that you’re syncing all of the f
 ### Deactivate devices and licenses
 
 - Kindle for Mac > Preferences > General > Deregister
+- Unregister Boom 3D
 
 ## Restore Instructions
 
