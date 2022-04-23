@@ -41,11 +41,181 @@
                         },
                         {
                             "from": {
-                                "key_code": "caps_lock"
+                                "key_code": "clear"
                             },
                             "to": [
                                 {
-                                    "key_code": "escape"
+                                    "key_code": "3"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "grave_accent_and_tilde"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "non_us_backslash"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "insert"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "play_or_pause"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_0"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_control"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_2"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "h"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_3"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "4"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_4"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "f"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_5"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "a"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_6"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_shift"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_7"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_8"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "2"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_9"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "3"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_asterisk"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "c"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_enter"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "close_bracket"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_hyphen"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_option"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_period"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "open_bracket"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_plus"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "w"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_slash"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "r"
                                 }
                             ]
                         },
@@ -71,6 +241,36 @@
                         },
                         {
                             "from": {
+                                "key_code": "non_us_backslash"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "grave_accent_and_tilde"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "pause"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "volume_increment"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "print_screen"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "mute"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
                                 "key_code": "right_option"
                             },
                             "to": [
@@ -81,21 +281,11 @@
                         },
                         {
                             "from": {
-                                "key_code": "grave_accent_and_tilde"
+                                "key_code": "scroll_lock"
                             },
                             "to": [
                                 {
-                                    "key_code": "non_us_backslash"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "non_us_backslash"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "grave_accent_and_tilde"
+                                    "consumer_key_code": "volume_decrement"
                                 }
                             ]
                         }
@@ -307,48 +497,7 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": {
-                        "key_code": "insert"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "play_or_pause"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "pause"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_increment"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "print_screen"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "mute"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "scroll_lock"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_decrement"
-                        }
-                    ]
-                }
-            ],
+            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "country_code": 0,
