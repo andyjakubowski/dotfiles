@@ -137,8 +137,8 @@ Potential AppleScript automation:
 
 ### Pomodoro
 
-1. Copy `~/Dropbox/Pomodoro/Pomodoro.app` to `/Applications`.
-2. Copy the contents of `~/Dropbox/Pomodoro/Log` to `~/Library/Application Support/Pomodoro`.
+1. Copy `~/Library/CloudStorage/Dropbox/Pomodoro/Pomodoro.app` to `/Applications`.
+2. Copy the contents of `~/Library/CloudStorage/Dropbox/Pomodoro/Log` to `~/Library/Application Support/Pomodoro`.
 
 Remember the _new pomodoro_ keyboard shortcut: `Control-Option-Command-UpArrow`.
 
@@ -150,22 +150,22 @@ https://www.alfredapp.com/help/getting-started/migration/
 2. `Alfred Preferences > Powerpack` add License.
 3. `Alfred Preferences > General > Request Permissions`.
 4. `Alfred Preferences > General > Alfred Hotkey` change to `cmd+space`.
-5. `Alfred Preferences > Advanced > Set preferences folder` and set to `~/Dropbox/Alfred`.
+5. `Alfred Preferences > Advanced > Set preferences folder` and set to `~/Library/CloudStorage/Dropbox/Alfred`.
 
 ### Dash
 
-1. `Dash Preferences > Purchase` add license from `~/Dropbox/Dash`.
-2. `Dash Preferences > General > Set up syncing...` and set to `~/Dropbox/Dash`.
+1. `Dash Preferences > Purchase` add license from `~/Library/CloudStorage/Dropbox/Dash`.
+2. `Dash Preferences > General > Set up syncing...` and set to `~/Library/CloudStorage/Dropbox/Dash`.
 
 ### Notational Velocity
 
-1. `Notational Velocity Preferences > Notes > Read notes from folder...`, set to `~/Dropbox/Notational Velocity`.
+1. `Notational Velocity Preferences > Notes > Read notes from folder...`, set to `~/Library/CloudStorage/Dropbox/Notational Velocity`.
 2. Automatically setting bookmarks using `defaults` doesn’t seem to work — you’ll need to do it manually.
 
 ### Boostnote
 
 1. `Boostnote Preferences > Storage`, click Unlink next to the default storage location.
-2. `Boostnote Preferences > Storage`, click _Add Storage Location_, set to `~/Dropbox/Boostnote`.
+2. `Boostnote Preferences > Storage`, click _Add Storage Location_, set to `~/Library/CloudStorage/Dropbox/Boostnote`.
 
 ### Login items
 
