@@ -30,7 +30,6 @@ OS="$(uname)"
 UNAME_MACHINE="$(/usr/bin/uname -m)"
 if [[ "${OS}" == "Darwin" && "${UNAME_MACHINE}" == "arm64" ]]
 then
-  echo 'OH HI'
   # Prepend Homebrew’s bin and sbin directories to PATH
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
