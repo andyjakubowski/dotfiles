@@ -8,6 +8,9 @@
 # Only focuses on switching Ruby versions
 # You need to install Ruby versions yourself, or use ruby-build
 # https://github.com/rbenv/rbenv/wiki/Why-rbenv%3F
+# rbenv instructs to load rbenv in your shell by running $ rbenv init
+# rbenv init puts Homebrew’s bin and sbin directories (bin contains rbenv) on the PATH
+# Skip $ rbenv init, because we already put Homebrew on the PATH ourselves in `zshrc`
 # brew "rbenv"
 
 # Everything you need to get started with Heroku
