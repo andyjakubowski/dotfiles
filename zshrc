@@ -7,32 +7,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export NULLCMD=bat
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 
-# Set up pyenv (Python version manager)
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# Change ZSH Options
-
-
-# Create Aliases
-alias ls='exa -laFh --git'
-alias exa='exa -laFh --git'
-alias trail='<<<${(F)path}'
-alias rm=trash
-alias defaults-domains='defaults domains | tr , \\n'
-alias bbd="brew bundle dump --force --describe"
-# Aliases for keg-only Ruby 2.x
-RUBY_PATH=$(brew --prefix ruby)@2/bin
-alias bbundle=$RUBY_PATH/bundle
-alias bexec='bbundle exec'
-alias brails='bexec rails'
-alias berb=$RUBY_PATH/erb
-alias bgem=$RUBY_PATH/gem
-alias birb=$RUBY_PATH/irb
-alias brake=$RUBY_PATH/rake
-alias bruby=$RUBY_PATH/ruby
-
 # Customize Prompt(s)
 PROMPT='
 %1~ %L %# '
@@ -61,6 +35,29 @@ path=(
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
+
+# Set up pyenv (Python version manager)
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Create Aliases
+alias ls='exa -laFh --git'
+alias exa='exa -laFh --git'
+alias trail='<<<${(F)path}'
+alias rm=trash
+alias defaults-domains='defaults domains | tr , \\n'
+alias bbd="brew bundle dump --force --describe"
+# Aliases for keg-only Ruby 2.x
+RUBY_PATH=$(brew --prefix ruby)@2/bin
+alias bbundle=$RUBY_PATH/bundle
+alias bexec='bbundle exec'
+alias brails='bexec rails'
+alias berb=$RUBY_PATH/erb
+alias bgem=$RUBY_PATH/gem
+alias birb=$RUBY_PATH/irb
+alias brake=$RUBY_PATH/rake
+alias bruby=$RUBY_PATH/ruby
 
 
 # Use ZSH Plugins
