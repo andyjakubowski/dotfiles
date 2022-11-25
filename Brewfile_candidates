@@ -14,6 +14,7 @@
 # brew "rbenv"
 
 # Everything you need to get started with Heroku
+# You’ll need to add "tap heroku/brew to the Brewfile"
 # brew "heroku/brew/heroku"
 
 # Lightweight DNS forwarder and DHCP server
