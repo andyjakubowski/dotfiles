@@ -58,7 +58,8 @@ alias bgem=$RUBY_PATH/gem
 alias birb=$RUBY_PATH/irb
 alias brake=$RUBY_PATH/rake
 alias bruby=$RUBY_PATH/ruby
-
+# Output PATH segments on separate lines
+alias path='echo $path | tr " " \\n'
 
 # Use ZSH Plugins
 
