@@ -27,6 +27,10 @@ fi
 typeset -U path
 
 path=(
+  # Homebrew Ruby is keg-only and not symlinked; You need to manually put it on the PATH if you want to use it
+  # Normally, you should use rbenv for installing different Ruby versions; This is here because my ruby-build kept failing on an M1 Mac
+  # /opt/homebrew/opt/ruby@2.7/bin
+  # /opt/homebrew/lib/ruby/gems/2.7.0/bin
   "$N_PREFIX/bin"
   $path
 )
@@ -40,6 +44,11 @@ function mkcd() {
 # export PYENV_ROOT="$HOME/.pyenv"
 # command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init -)"
+
+# Prepend asdf to PATH
+# asdf is a version manager for Node, Ruby, and other languages
+# https://asdf-vm.com/guide/getting-started.html
+# . $(brew --prefix asdf)/libexec/asdf.sh
 
 # Create Aliases
 alias ls='exa -laFh --git'
