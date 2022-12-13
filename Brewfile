@@ -1,4 +1,5 @@
 tap "andyjakubowski/software"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
@@ -6,8 +7,12 @@ tap "homebrew/core"
 tap "homebrew/services"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Lightweight DNS forwarder and DHCP server
+brew "dnsmasq", restart_service: true
 # Modern replacement for 'ls'
 brew "exa"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Distributed revision control system
 brew "git"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -21,15 +26,19 @@ brew "n"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
 # Object-relational database system
-brew "postgresql", restart_service: true
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
+brew "postgresql@14", restart_service: true
+# Python version management
+brew "pyenv"
+# Persistent key-value database, with built-in net interface
+brew "redis"
 # Simplified and community-driven man pages
 brew "tldr"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
 # Collection of apps and services for photography, design, video, web, and UX
@@ -49,7 +58,11 @@ cask "figma"
 # Web browser
 cask "firefox"
 # Web browser
+cask "firefox-developer-edition"
+# Web browser
 cask "google-chrome"
+# Open-source video transcoder
+cask "handbrake"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Open-source screen recorder built with web technology
@@ -65,6 +78,8 @@ cask "netnewswire"
 cask "notational-velocity"
 # GUI client for PostgreSQL databases
 cask "postico"
+# Collaboration platform for API development
+cask "postman"
 # Web browser
 cask "safari-technology-preview"
 # Block your own access to distracting websites
