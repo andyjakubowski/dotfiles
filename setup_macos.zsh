@@ -521,12 +521,12 @@ defaults write com.ugolandini.Pomodoro ringBreakVolume -float 20.0
 defaults write com.ugolandini.Pomodoro pomodoroName -string "Enter Pomodoro name"
 defaults write com.ugolandini.Pomodoro showSplashScreenAtStartup -bool false
 defaults write com.ugolandini.Pomodoro globalStartDate -date 2017-02-14T12:00:00Z
-# defaults write com.ugolandini.Pomodoro globalPomodoroStarted -int 9803
-# defaults write com.ugolandini.Pomodoro globalPomodoroDone -int 9391
-# defaults write com.ugolandini.Pomodoro globalPomodoroReset -int 363
-# defaults write com.ugolandini.Pomodoro globalInternalInterruptions -int 88
-# defaults write com.ugolandini.Pomodoro globalExternalInterruptions -int 19
-# defaults write com.ugolandini.Pomodoro globalPomodoroResumed -int 96
+# defaults write com.ugolandini.Pomodoro globalPomodoroStarted -int 12604
+# defaults write com.ugolandini.Pomodoro globalPomodoroDone -int 12078
+# defaults write com.ugolandini.Pomodoro globalPomodoroReset -int 469
+# defaults write com.ugolandini.Pomodoro globalInternalInterruptions -int 89
+# defaults write com.ugolandini.Pomodoro globalExternalInterruptions -int 22
+# defaults write com.ugolandini.Pomodoro globalPomodoroResumed -int 97
 
 ###############################################################################
 # Notational Velocity                                                         #
