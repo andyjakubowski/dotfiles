@@ -16,7 +16,7 @@ You might have installed apps on your Mac that aren’t yet reflected in your do
 
 1. Back up the `~/Library/Application Support/Pomodoro` directory, which holds an SQL log of all past pomodoros.
 2. `Pomodoro Stats > Log`, Export as text file, for good measure.
-3. Back up global and local stats keys from `com.ugolandini.Pomodoro` into this repo with `defaults read com.ugolandini.Pomodoro > ~/.dotfiles/pomodoro-defaults-dump.txt`. Then, update the `defaults write com.ugolandini.Pomodoro ...` statements in `setup_macos.zsh` with the updated data. This is the one non-idempotent part of this repo, so you’ll have to comment out these statements after the initial install on a new machine to avoid resetting your Pomodoro stats.
+3. Back up global and local stats keys from `com.ugolandini.Pomodoro` into this repo with `defaults read com.ugolandini.Pomodoro > ~/.dotfiles/pomodoro-defaults-dump.txt`. Then, update the `defaults write com.ugolandini.Pomodoro ...` statements in `setup_macos.zsh` with the updated data. 🚨 This is the one non-idempotent part of this repo, so you’ll have to comment out these statements after the initial install on a new machine to avoid resetting your Pomodoro stats.
 
 ### Visual Studio Code
 
