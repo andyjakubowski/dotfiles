@@ -26,7 +26,7 @@ brew "n"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
 # Object-relational database system
-brew "postgresql@14", restart_service: true
+brew "postgresql@15", restart_service: true
 # Python version management
 brew "pyenv"
 # Persistent key-value database, with built-in net interface
