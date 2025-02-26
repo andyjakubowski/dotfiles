@@ -17,8 +17,7 @@ RPROMPT='%*'
 # https://docs.brew.sh/Manpage#shellenv
 OS="$(uname)"
 UNAME_MACHINE="$(/usr/bin/uname -m)"
-if [[ "${OS}" == "Darwin" && "${UNAME_MACHINE}" == "arm64" ]]
-then
+if [[ "${OS}" == "Darwin" && "${UNAME_MACHINE}" == "arm64" ]]; then
   # Prepend Homebrew’s bin and sbin directories to PATH
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
@@ -37,12 +36,15 @@ path=(
 
 # Write Handy Functions
 function mkcd() {
-  mkdir -p "$@" && cd "$_";
+  mkdir -p "$@" && cd "$_"
 }
 
 # Set up pyenv (Python version manager)
+# Set env environment variable for pyenv root directory
 export PYENV_ROOT="$HOME/.pyenv"
+# Add pyenv to PATH if it’s not already there
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# Set up shims and autocompletion
 eval "$(pyenv init -)"
 
 # Prepend asdf to PATH
@@ -71,6 +73,5 @@ alias bruby=$RUBY_PATH/ruby
 alias path='echo $path | tr " " \\n'
 
 # Use ZSH Plugins
-
 
 # ...and Other Surprises
