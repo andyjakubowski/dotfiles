@@ -1,5 +1,6 @@
 [user]
-	name = Andy Jakubowski
-	email = 477212+andyjakubowski@users.noreply.github.com
+name = Andy Jakubowski
+email = hello@andyjakubowski.com
+
 [core]
-	editor = nano
+editor = "code --wait"
