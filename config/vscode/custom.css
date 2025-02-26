@@ -1,0 +1,29 @@
+.quick-input-box {
+  /* border: 2px solid blue !important; */
+}
+
+.quick-input-list {
+  /* border: 2px solid green !important; */
+}
+
+/* .quick-input-widget {
+	position: absolute;
+	width: 600px;
+	z-index: 2550;
+	left: 50%;
+	margin-left: -300px;
+	-webkit-app-region: no-drag;
+	border-radius: 6px;
+} */
+
+.quick-input-widget {
+  margin-left: 0 !important;
+  left: 0;
+  top: 0;
+  --width: min(90vw, 1100px);
+  width: var(--width) !important;
+  left: calc((100vw - var(--width)) / 2) !important;
+  /* margin-left: -10vw !important; */
+  /* max-width: 900px !important; */
+  /* border: 2px solid red !important; */
+}
