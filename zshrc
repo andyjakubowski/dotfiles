@@ -47,6 +47,23 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 # Set up shims and autocompletion
 eval "$(pyenv init -)"
 
+# Activate Python venv when entering a directory containing a ".venv" subdirectory
+activate_venv_if_available() {
+  local venv_dir=".venv"
+  if [[ -d "$PWD/$venv_dir" ]]; then
+    source "$PWD/$venv_dir/bin/activate"
+  else
+    deactivate 2>/dev/null # Suppress errors if no venv is active
+  fi
+}
+
+autoload -U add-zsh-hook
+
+# Run function when changing directories
+add-zsh-hook chpwd activate_venv_if_available
+# Run function when starting a new shell
+activate_venv_if_available
+
 # Prepend asdf to PATH
 # asdf is a version manager for Node, Ruby, and other languages
 # https://asdf-vm.com/guide/getting-started.html
