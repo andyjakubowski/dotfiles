@@ -41,9 +41,9 @@ function mkcd() {
 }
 
 # Set up pyenv (Python version manager)
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Prepend asdf to PATH
 # asdf is a version manager for Node, Ruby, and other languages
