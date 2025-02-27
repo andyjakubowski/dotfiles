@@ -8,8 +8,11 @@ export NULLCMD=bat
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 
 # Customize Prompt(s)
-PROMPT='
-%1~ %L %# '
+ORIGINAL_PROMPT_LINE_1='
+'
+ORIGINAL_PROMPT_LINE_2="%1~ %L %# " # Restore complete prompt variable
+ORIGINAL_PROMPT="${ORIGINAL_PROMPT_LINE_1}${ORIGINAL_PROMPT_LINE_2}"
+PROMPT="${ORIGINAL_PROMPT}"
 
 RPROMPT='%*'
 
@@ -52,9 +55,22 @@ activate_venv_if_available() {
   local venv_dir=".venv"
   if [[ -d "$PWD/$venv_dir" ]]; then
     echo "Detected .venv directory; Activating virtual environment..."
+
+    # Disable default venv prompt formatting
+    export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+    # Source the venv
     source "$PWD/$venv_dir/bin/activate"
+
+    # Customize prompt with venv name (only if not already present)
+    # VIRTUAL_VENV is set by the venv activate script
+    export VENV_NAME="(${VIRTUAL_ENV:t})"
+
+    PROMPT="${ORIGINAL_PROMPT_LINE_1}${VENV_NAME} ${ORIGINAL_PROMPT_LINE_2}"
   else
     deactivate 2>/dev/null # Suppress errors if no venv is active
+    PROMPT="${ORIGINAL_PROMPT}"
+    unset VENV_NAME
   fi
 }
 
