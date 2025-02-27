@@ -51,6 +51,7 @@ eval "$(pyenv init -)"
 activate_venv_if_available() {
   local venv_dir=".venv"
   if [[ -d "$PWD/$venv_dir" ]]; then
+    echo "Detected .venv directory; Activating virtual environment..."
     source "$PWD/$venv_dir/bin/activate"
   else
     deactivate 2>/dev/null # Suppress errors if no venv is active
