@@ -1,10 +1,6 @@
 echo 'Hello from .zshrc'
 
 # Set Variables
-# Syntax highlighting for man pages using bat
-export BAT_THEME="GitHub"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export NULLCMD=bat
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 
 # Customize Prompt(s)

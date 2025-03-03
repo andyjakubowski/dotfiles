@@ -369,7 +369,6 @@ Default parameter 2 (macOS key code)
 Default parameter 3
 Comments
 
-
 ASCII
 https://theasciicode.com.ar
 https://www.asciitable.com
@@ -377,12 +376,10 @@ https://www.asciitable.com
 65635 - hex 0xFFFF
 (16^3)*15+(16^2)*15+(16^1)*15+(16^0)*15 = 65635
 
-
 Key codes
-$ bat /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
+$ cat /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
 https://manytricks.com/keycodes/
 http://web.archive.org/web/20100501161453/http://www.classicteck.com/rbarticles/mackeyboard.php
-
 
 Modifier keys
 https://web.archive.org/web/20141112224103/http://hintsforums.macworld.com/showthread.php?t=114785
@@ -391,40 +388,37 @@ https://opensource.apple.com/source/IOHIDFamily/IOHIDFamily-1090.220.12/IOHIDSys
 https://onlinehextools.com/or-hex-numbers
 https://en.wikipedia.org/wiki/Bitwise_operation#OR
 the sum of the control, command, shift and option keys. these are bits 17-20 in binary: shift is bit 17, control is bit 18, option is bit 19, and command is bit 20.
+
 - decimal representation of a bitwise-ORs of the below values
 
-NX_ALPHASHIFTMASK	            0x00 010 000
-NX_SHIFTMASK		            0x00 020 000  (Shift)
-NX_CONTROLMASK		            0x00 040 000  (Control)
-NX_ALTERNATEMASK	            0x00 080 000  (Option, built-in Mac keyboard keys)
-NX_COMMANDMASK		            0x00 100 000  (Command)
-NX_NUMERICPADMASK               0x00 200 000
-NX_HELPMASK                     0x00 400 000
-NX_SECONDARYFNMASK              0x00 800 000  (function key)
-NX_ALPHASHIFT_STATELESS_MASK    0x01 000 000
+NX_ALPHASHIFTMASK 0x00 010 000
+NX_SHIFTMASK 0x00 020 000 (Shift)
+NX_CONTROLMASK 0x00 040 000 (Control)
+NX_ALTERNATEMASK 0x00 080 000 (Option, built-in Mac keyboard keys)
+NX_COMMANDMASK 0x00 100 000 (Command)
+NX_NUMERICPADMASK 0x00 200 000
+NX_HELPMASK 0x00 400 000
+NX_SECONDARYFNMASK 0x00 800 000 (function key)
+NX_ALPHASHIFT_STATELESS_MASK 0x01 000 000
 
 Mission Control
 
 Control-Arrow
 Arrow = NX_SECONDARYFNMASK + NX_CONTROLMASK = 0x00 840 000
 8650752
-                                0x00 840 000
+0x00 840 000
 (16^5)*8 + (16^4)*4 + (16^3)*0 + (16^2)*0 + (16^1)*0 + (16^0)*0
 
 Dedicated Mac Key (e.g. Mission Control)
 NX_SECONDARYFNMASK + NX_CONTROLMASK + NX_SHIFTMASK = 0x00 860 000
-                                0x00 860 000
+0x00 860 000
 8781824
 (16^5)*8 + (16^4)*6 + (16^3)*0 + (16^2)*0 + (16^1)*0 + (16^0)*0
-
 
 Dedicated "Decrease display brightness" key
 NX_SECONDARYFNMASK + NX_ALTERNATEMASK
 8912896
 0x00 880 000
 (16^5)*8 + (16^4)*8 + (16^3)*0 + (16^2)*0 + (16^1)*0 + (16^0)*0
-
-
-
 
 (16^5)*0 + (16^4)*0 + (16^3)*0 + (16^2)*0 + (16^1)*0 + (16^0)*0

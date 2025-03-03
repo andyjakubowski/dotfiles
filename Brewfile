@@ -5,8 +5,6 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-# Clone of cat(1) with syntax highlighting and Git integration
-brew "bat"
 # Lightweight DNS forwarder and DHCP server
 brew "dnsmasq", restart_service: true
 # Modern replacement for 'ls'

@@ -11,9 +11,6 @@
       force: true
       path: gitconfig
     ~/.nanorc:
-    ~/.config/bat:
-      create: true
-      path: config/bat
     ~/.config/karabiner:
       force: true
       create: true
