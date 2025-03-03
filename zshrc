@@ -69,11 +69,6 @@ add-zsh-hook chpwd activate_venv_if_available
 # Run function when starting a new shell
 activate_venv_if_available
 
-# Prepend asdf to PATH
-# asdf is a version manager for Node, Ruby, and other languages
-# https://asdf-vm.com/guide/getting-started.html
-# . $(brew --prefix asdf)/libexec/asdf.sh
-
 # Create Aliases
 alias ls='eza -lah --classify --git'
 alias eza='eza -lah --classify --git'
@@ -81,19 +76,6 @@ alias trail='<<<${(F)path}'
 alias rm=trash
 alias defaults-domains='defaults domains | tr , \\n'
 alias bbd="brew bundle dump --force --describe"
-# Aliases for keg-only Ruby 2.x
-RUBY_PATH=$(brew --prefix ruby)@2/bin
-alias bbundle=$RUBY_PATH/bundle
-alias bexec='bbundle exec'
-alias brails='bexec rails'
-alias berb=$RUBY_PATH/erb
-alias bgem=$RUBY_PATH/gem
-alias birb=$RUBY_PATH/irb
-alias brake=$RUBY_PATH/rake
-alias bruby=$RUBY_PATH/ruby
+
 # Output PATH segments on separate lines
 alias path='echo $path | tr " " \\n'
-
-# Use ZSH Plugins
-
-# ...and Other Surprises
