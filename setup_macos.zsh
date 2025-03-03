@@ -163,10 +163,10 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict-add \
-	MetaData -bool true \
-	Comments -bool true \
-	OpenWith -bool true \
-	Preview -bool false
+    MetaData -bool true \
+    Comments -bool true \
+    OpenWith -bool true \
+    Preview -bool false
 
 ###############################################################################
 # Dock                                                                        #
@@ -418,7 +418,7 @@ defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -bool 
 # @ Command
 # $ Shift
 # ~ Option
-# ^ Control 
+# ^ Control
 # Example: "@~K" is Command-Option-K
 
 # ↑ U+2191
@@ -426,7 +426,6 @@ defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -bool 
 # ← U+2190
 # → U+2192
 # https://unicode-table.com/en/#003E
-
 
 # Sketch
 
@@ -521,9 +520,9 @@ defaults write com.ugolandini.Pomodoro ringBreakVolume -float 20.0
 defaults write com.ugolandini.Pomodoro pomodoroName -string "Enter Pomodoro name"
 defaults write com.ugolandini.Pomodoro showSplashScreenAtStartup -bool false
 defaults write com.ugolandini.Pomodoro globalStartDate -date 2017-02-14T12:00:00Z
-# defaults write com.ugolandini.Pomodoro globalPomodoroStarted -int 12604
-# defaults write com.ugolandini.Pomodoro globalPomodoroDone -int 12078
-# defaults write com.ugolandini.Pomodoro globalPomodoroReset -int 469
+# defaults write com.ugolandini.Pomodoro globalPomodoroStarted -int 16372
+# defaults write com.ugolandini.Pomodoro globalPomodoroDone -int 15742
+# defaults write com.ugolandini.Pomodoro globalPomodoroReset -int 560
 # defaults write com.ugolandini.Pomodoro globalInternalInterruptions -int 89
 # defaults write com.ugolandini.Pomodoro globalExternalInterruptions -int 22
 # defaults write com.ugolandini.Pomodoro globalPomodoroResumed -int 97
@@ -592,4 +591,3 @@ killall Dock
 killall Safari
 echo "\n<<< macOS Setup Complete.
     A logout or restart might be necessary. >>>\n"
-
