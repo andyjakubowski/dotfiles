@@ -1,6 +1,14 @@
 [user]
 name = Andy Jakubowski
 email = hello@andyjakubowski.com
+signingkey = B1474D723D48075D
 
 [core]
 editor = "code --wait"
+
+[commit]
+gpgsign = true
+[tag]
+gpgsign = true
+[gpg]
+program = /opt/homebrew/bin/gpg
