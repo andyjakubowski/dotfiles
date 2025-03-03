@@ -27,14 +27,13 @@ brew "n"
 brew "nano"
 # Object-relational database system
 brew "postgresql@15", restart_service: true
-# Python version management
-brew "pyenv"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Simplified and community-driven man pages
 brew "tldr"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+brew "uv"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Everything you need to get started with Heroku

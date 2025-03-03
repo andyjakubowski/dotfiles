@@ -42,14 +42,6 @@ function mkcd() {
   mkdir -p "$@" && cd "$_"
 }
 
-# Set up pyenv (Python version manager)
-# Set env environment variable for pyenv root directory
-export PYENV_ROOT="$HOME/.pyenv"
-# Add pyenv to PATH if it’s not already there
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# Set up shims and autocompletion
-eval "$(pyenv init -)"
-
 # Activate Python venv when entering a directory containing a ".venv" subdirectory
 activate_venv_if_available() {
   local venv_dir=".venv"
