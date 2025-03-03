@@ -75,8 +75,8 @@ activate_venv_if_available
 # . $(brew --prefix asdf)/libexec/asdf.sh
 
 # Create Aliases
-alias ls='exa -laFh --git'
-alias exa='exa -laFh --git'
+alias ls='eza -lah --classify --git'
+alias eza='eza -lah --classify --git'
 alias trail='<<<${(F)path}'
 alias rm=trash
 alias defaults-domains='defaults domains | tr , \\n'

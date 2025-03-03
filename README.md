@@ -179,9 +179,9 @@ https://www.alfredapp.com/help/getting-started/migration/
 
 ### Aliases
 
-When you run `./install`, files like `zshenv` and `zshrc` will be linked before any software is installed. This means your [Z Shell](https://zsh.sourceforge.io/) will start using certain aliases that are configured in those files. For example: `alias ls='exa -laFh --git'`.
+When you run `./install`, files like `zshenv` and `zshrc` will be linked before any software is installed. This means your [Z Shell](https://zsh.sourceforge.io/) will start using certain aliases that are configured in those files. For example: `alias ls='eza -lah --classify --git'`.
 
-These aliases rely on non-standard software being installed. But if this for whatever reason the software fails to install when you run `./install`, You’ll end up with errors in your terminal like `zsh: command not found: exa`.
+These aliases rely on non-standard software being installed. But if this for whatever reason the software fails to install when you run `./install`, You’ll end up with errors in your terminal like `zsh: command not found: eza`.
 
 Run `where ls` to see the full path to the original, non-aliased `ls`. Then you’d run something like `/bin/ls /bin` instead.
 
