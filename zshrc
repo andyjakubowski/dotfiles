@@ -79,3 +79,7 @@ alias bbd="brew bundle dump --force --describe"
 
 # Output PATH segments on separate lines
 alias path='echo $path | tr " " \\n'
+
+# Set up GitHub Copilot suggest (ghcs) and explain (ghce) aliases
+# This gives suggest permission to execute suggested commands
+eval "$(gh copilot alias -- zsh)"
