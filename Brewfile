@@ -21,6 +21,8 @@ brew "eza"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -33,6 +35,8 @@ brew "mas"
 brew "n"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Search tool like grep and The Silver Searcher
@@ -45,6 +49,8 @@ brew "tldr"
 brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Command-line client for WebSockets
+brew "websocat"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Stripe CLI utility
@@ -166,6 +172,7 @@ vscode "formulahendry.auto-rename-tag"
 vscode "foxundermoon.shell-format"
 vscode "github.copilot"
 vscode "github.copilot-chat"
+vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "golang.go"
 vscode "grapecity.gc-excelviewer"
@@ -217,7 +224,7 @@ vscode "naumovs.theme-oceanicnext"
 vscode "nrwl.angular-console"
 vscode "octref.vetur"
 vscode "oderwat.indent-rainbow"
-vscode "openai.openai-chatgpt-adhoc"
+vscode "openai.chatgpt"
 vscode "orta.vscode-jest"
 vscode "pflannery.vscode-versionlens"
 vscode "pkief.material-icon-theme"
