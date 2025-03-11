@@ -12,3 +12,8 @@ gpgsign = true
 gpgsign = true
 [gpg]
 program = /opt/homebrew/bin/gpg
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
