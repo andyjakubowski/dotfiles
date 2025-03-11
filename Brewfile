@@ -2,6 +2,7 @@ tap "andyjakubowski/software"
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
+tap "netbirdio/tap"
 tap "stripe/stripe-cli"
 # C parser in Python
 brew "pycparser"
@@ -53,6 +54,8 @@ brew "uv"
 brew "websocat"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Netbird project.
+brew "netbirdio/tap/netbird"
 # Stripe CLI utility
 brew "stripe/stripe-cli/stripe"
 # Command-line interface for 1Password
