@@ -101,6 +101,8 @@ cask "postico"
 cask "postman"
 # Web browser
 cask "safari-technology-preview"
+# Screen recorder and editor
+cask "screen-studio"
 # Block your own access to distracting websites
 cask "selfcontrol"
 # Instant messaging application focusing on security
@@ -182,6 +184,7 @@ vscode "grapecity.gc-excelviewer"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-execution"
 vscode "graphql.vscode-graphql-syntax"
+vscode "inferrinizzard.prettier-sql-vscode"
 vscode "jock.svg"
 vscode "johnpapa.vscode-peacock"
 vscode "kisstkondoros.vscode-gutter-preview"
