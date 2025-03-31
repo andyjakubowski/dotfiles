@@ -3,6 +3,9 @@ echo 'Hello from .zshrc'
 # Set Variables
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 
+# Deepnote-specific variables
+export ESLINT_TYPECHECK_ENABLED=true
+
 # Customize Prompt(s)
 ORIGINAL_PROMPT_LINE_1='
 '
