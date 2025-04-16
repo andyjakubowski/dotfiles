@@ -6,6 +6,10 @@ export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 # Deepnote-specific variables
 export ESLINT_TYPECHECK_ENABLED=true
 
+# Node setup
+# --max-old-space-size sets max heap memory in MB (adjust as needed for your machine)
+export NODE_OPTIONS="--max-old-space-size=16384"
+
 # Customize Prompt(s)
 ORIGINAL_PROMPT_LINE_1='
 '
