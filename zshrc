@@ -37,6 +37,8 @@ path=(
   # /opt/homebrew/opt/ruby@2.7/bin
   # /opt/homebrew/lib/ruby/gems/2.7.0/bin
   "$N_PREFIX/bin"
+  # Used by tools like pipx, poetry
+  "$HOME/.local/bin"
   $path
 )
 
