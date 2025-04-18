@@ -18,6 +18,8 @@ brew "cmake"
 brew "libssh2"
 # Modern, maintained replacement for ls
 brew "eza"
+# Libraries to talk to Microsoft SQL Server and Sybase databases
+brew "freetds"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
