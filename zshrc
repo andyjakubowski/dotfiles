@@ -51,7 +51,7 @@ function mkcd() {
 activate_venv_if_available() {
   local venv_dir=".venv"
   if [[ -d "$PWD/$venv_dir" ]]; then
-    echo "Detected .venv directory; Activating virtual environment..."
+    echo "Detected a Python virtual environment directory (.venv). Activating the virtual environment by running “source .venv/bin/activate”."
 
     # Disable default venv prompt formatting
     export VIRTUAL_ENV_DISABLE_PROMPT=1
