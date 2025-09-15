@@ -2,6 +2,7 @@ echo 'Hello from .zshrc'
 
 # Set Variables
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
+export HOMEBREW_BUNDLE_DUMP_DESCRIBE=true
 
 # Deepnote-specific variables
 # export ESLINT_TYPECHECK_ENABLED=true
