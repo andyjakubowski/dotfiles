@@ -56,6 +56,8 @@ brew "tree"
 brew "uv"
 # Command-line client for WebSockets
 brew "websocat"
+# Library to create, extract, and modify Windows Imaging files
+brew "wimlib"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Netbird project.
@@ -87,7 +89,7 @@ cask "github"
 # Web browser
 cask "google-chrome"
 # Open-source video transcoder
-cask "handbrake"
+cask "handbrake-app"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Keyboard customiser
@@ -151,11 +153,14 @@ mas "Pomodoro", id: 417574133
 mas "Presentify", id: 1507246666
 mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
+mas "Tailscale", id: 1475387142
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
 mas "WhatsApp", id: 310633997
+mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 vscode "alexcvzz.vscode-sqlite"
+vscode "amodio.tsl-problem-matcher"
 vscode "apollographql.vscode-apollo"
 vscode "arcanis.vscode-zipfs"
 vscode "attilabuti.vscode-mjml"
@@ -163,8 +168,10 @@ vscode "be5invis.vscode-custom-css"
 vscode "biomejs.biome"
 vscode "burkeholland.simple-react-snippets"
 vscode "burkeholland.vs-code-can-do-that"
+vscode "charliermarsh.ruff"
 vscode "christian-kohler.npm-intellisense"
 vscode "clinyong.vscode-css-modules"
+vscode "connor4312.esbuild-problem-matchers"
 vscode "cssho.vscode-svgviewer"
 vscode "dae.vscode-mac-color-picker"
 vscode "dbaeumer.vscode-eslint"
@@ -173,6 +180,7 @@ vscode "dotjoshjohnson.xml"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "eamodio.gitlens"
 vscode "ecmel.vscode-html-css"
+vscode "editorconfig.editorconfig"
 vscode "emeraldwalk.runonsave"
 vscode "esbenp.prettier-vscode"
 vscode "firsttris.vscode-jest-runner"
@@ -189,6 +197,8 @@ vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-execution"
 vscode "graphql.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
+vscode "hbenl.vscode-mocha-test-adapter"
+vscode "hbenl.vscode-test-explorer"
 vscode "inferrinizzard.prettier-sql-vscode"
 vscode "jock.svg"
 vscode "johnpapa.vscode-peacock"
@@ -198,14 +208,18 @@ vscode "mf.vscode-styled-components"
 vscode "mgmcdermott.vscode-language-babel"
 vscode "mohsen1.prettify-json"
 vscode "monokai.theme-monokai-pro-vscode"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-playwright.playwright"
+vscode "ms-pyright.pyright"
 vscode "ms-python.black-formatter"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
@@ -219,9 +233,11 @@ vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
+vscode "ms-vscode.extension-test-runner"
 vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
+vscode "ms-vscode.test-adapter-converter"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "nathanridley.autotrim"
 vscode "naumovs.color-highlight"
