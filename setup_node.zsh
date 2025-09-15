@@ -18,6 +18,7 @@ fi
 # Install Global NPM Packages
 npm install --global trash-cli
 npm install --global yarn
+npm install --global @anthropic-ai/claude-code
 
 echo "Global NPM Packages Installed:"
 npm list --global --depth=0
