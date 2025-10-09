@@ -93,3 +93,18 @@ alias path='echo $path | tr " " \\n'
 # Set up GitHub Copilot suggest (ghcs) and explain (ghce) aliases
 # This gives suggest permission to execute suggested commands
 eval "$(gh copilot alias -- zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/work/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# qlty completions
+[ -s "/opt/homebrew/share/zsh/site-functions/_qlty" ] && source "/opt/homebrew/share/zsh/site-functions/_qlty"
+
+# qlty
+export QLTY_INSTALL="$HOME/.qlty"
+export PATH="$QLTY_INSTALL/bin:$PATH"
