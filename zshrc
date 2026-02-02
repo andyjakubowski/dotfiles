@@ -7,6 +7,11 @@ export HOMEBREW_BUNDLE_DUMP_DESCRIBE=true
 # Deepnote-specific variables
 # export ESLINT_TYPECHECK_ENABLED=true
 
+# Load environment variables from ~/.env if it exists
+if [ -f "$HOME/.env" ]; then
+  export $(grep -v '^#' "$HOME/.env" | xargs)
+fi
+
 # Node setup
 # --max-old-space-size sets max heap memory in MB (adjust as needed for your machine)
 export NODE_OPTIONS="--max-old-space-size=16384"
