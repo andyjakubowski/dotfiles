@@ -75,24 +75,31 @@ function digitalocean_api() {
 function _droplet_list() {
   digitalocean_api GET '/v2/droplets?per_page=200' | jq -r '
     [
-      ["ID", "NAME", "STATUS", "PUBLIC IPV4", "TAGS"],
+      ["ID", "NAME", "STATUS", "PUBLIC IPV4", "TAGS", "CREATED"],
       (.droplets[] | [
         (.id | tostring),
         .name,
         .status,
         ([.networks.v4[]? | select(.type == "public") | .ip_address][0] // "-"),
-        ((.tags // []) | if length == 0 then "-" else join(",") end)
+        ((.tags // []) | if length == 0 then "-" else join(",") end),
+        (.created_at // "-")
       ])
     ] as $rows
     | ($rows | transpose | map(map(length) | max)) as $widths
-    | $rows[]
-    | to_entries
-    | map(
-        if .key == 4 then .value
-        else .value + (" " * ($widths[.key] - (.value | length) + 2))
-        end
-      )
-    | join("")
+    | (
+        $rows[]
+        | to_entries
+        | map(
+            if .key == 5 then .value
+            else .value + (" " * ($widths[.key] - (.value | length) + 2))
+            end
+          )
+        | join("")
+      ),
+      "",
+      "💸 Tiny cloud potatoes cost money. Clean up when you are done:",
+      "ssh root@<public-ip>",
+      "droplet delete <tag>"
   '
 }
 
@@ -131,6 +138,7 @@ function _droplet_create() {
     public_ip="$(jq -r '[.droplet.networks.v4[]? | select(.type == "public") | .ip_address][0] // empty' <<< "$response")"
 
     if [[ "$droplet_status" == active && -n "$public_ip" ]]; then
+      echo "💸 Your tiny cloud potato is now costing money. When you're done: droplet delete $tag" >&2
       echo "ssh root@$public_ip"
       return
     fi
