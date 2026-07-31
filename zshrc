@@ -53,6 +53,108 @@ function mkcd() {
   mkdir -p "$@" && cd "$_"
 }
 
+function digitalocean_api() {
+  local method="$1"
+  local route="$2"
+  local data="$3"
+  local -a args
+
+  args=(
+    --silent
+    --show-error
+    --fail-with-body
+    --request "$method"
+    --header "Authorization: Bearer $(op read 'op://Personal/digital-ocean-droplet-token/credential')"
+    --header 'Content-Type: application/json'
+  )
+  [[ -n "$data" ]] && args+=(--data "$data")
+
+  curl "${args[@]}" "https://api.digitalocean.com$route"
+}
+
+function _droplet_list() {
+  digitalocean_api GET '/v2/droplets?per_page=200' | jq -r '
+    [
+      ["ID", "NAME", "STATUS", "PUBLIC IPV4", "TAGS"],
+      (.droplets[] | [
+        (.id | tostring),
+        .name,
+        .status,
+        ([.networks.v4[]? | select(.type == "public") | .ip_address][0] // "-"),
+        ((.tags // []) | if length == 0 then "-" else join(",") end)
+      ])
+    ] as $rows
+    | ($rows | transpose | map(map(length) | max)) as $widths
+    | $rows[]
+    | to_entries
+    | map(
+        if .key == 4 then .value
+        else .value + (" " * ($widths[.key] - (.value | length) + 2))
+        end
+      )
+    | join("")
+  '
+}
+
+function _droplet_create() {
+  local ssh_key_id payload droplet_id droplet_status public_ip response
+  local ssh_key_name="mbp-work"
+  local region="fra1"
+  local size="s-1vcpu-512mb-10gb"
+  local image="ubuntu-26-04-x64"
+  local tag="${1:-sandbox}"
+
+  ssh_key_id="$(digitalocean_api GET '/v2/account/keys?per_page=200' |
+    jq -er --arg name "$ssh_key_name" '[.ssh_keys[] | select(.name == $name) | .id][0]')" || {
+      echo "DigitalOcean SSH key not found: $ssh_key_name" >&2
+      return 1
+    }
+
+  payload="$(jq -cn \
+    --arg name "sandbox" \
+    --arg region "$region" \
+    --arg size "$size" \
+    --arg image "$image" \
+    --arg tag "$tag" \
+    --argjson ssh_key_id "$ssh_key_id" \
+    '{name: $name, region: $region, size: $size, image: $image, ssh_keys: [$ssh_key_id], tags: [$tag]}')"
+
+  droplet_id="$(digitalocean_api POST '/v2/droplets' "$payload" | jq -er '.droplet.id')" || {
+    echo 'Could not create the DigitalOcean sandbox.' >&2
+    return 1
+  }
+
+  echo "Waiting for droplet $droplet_id..." >&2
+  while true; do
+    response="$(digitalocean_api GET "/v2/droplets/$droplet_id")" || return
+    droplet_status="$(jq -r '.droplet.status' <<< "$response")"
+    public_ip="$(jq -r '[.droplet.networks.v4[]? | select(.type == "public") | .ip_address][0] // empty' <<< "$response")"
+
+    if [[ "$droplet_status" == active && -n "$public_ip" ]]; then
+      echo "ssh root@$public_ip"
+      return
+    fi
+
+    sleep 5
+  done
+}
+
+function _droplet_delete() {
+  local tag="${1:-sandbox}"
+
+  digitalocean_api DELETE "/v2/droplets?tag_name=$tag" >/dev/null &&
+    echo "Deleted DigitalOcean droplets tagged $tag."
+}
+
+function droplet() {
+  case "$1" in
+    list) _droplet_list ;;
+    create) _droplet_create "$2" ;;
+    delete) _droplet_delete "$2" ;;
+    *) echo 'Usage: droplet {list|create [tag]|delete [tag]}' >&2; return 1 ;;
+  esac
+}
+
 # Activate Python venv when entering a directory containing a ".venv" subdirectory
 activate_venv_if_available() {
   local venv_dir=".venv"
