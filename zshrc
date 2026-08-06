@@ -216,3 +216,21 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# recorder and transcription tool
+
+export WHISPER_STREAM="$HOME/repos/whisper.cpp/build/bin/whisper-stream"
+
+function interview-start() {
+  interview start \
+    --watch-all \
+    --watch-ext ts \
+    --watch-ext txt \
+    --snapshot-interval 5 \
+    -m "$HOME/repos/whisper.cpp/models/ggml-large-v3-turbo-q5_0.bin" \
+    -t 8 \
+    --vad-interval 4000 \
+    --step 0 \
+    --length 10000 \
+    "$@"
+}
