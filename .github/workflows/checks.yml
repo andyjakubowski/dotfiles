@@ -1,0 +1,25 @@
+name: Offline provisioning checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check shell syntax
+        run: |
+          bash -n install
+          for script in setup_*.zsh zshenv zshrc; do
+            zsh -n "$script"
+          done
+      - name: Exercise Node provisioning with fake commands
+        run: python3 -m unittest discover -s tests -v
