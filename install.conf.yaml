@@ -25,6 +25,7 @@
       stdout: true
       stderr: true
     - command: ./setup_zsh.zsh
+      stdin: true
       stdout: true
       stderr: true
     - command: ./setup_node.zsh
@@ -36,3 +37,4 @@
     - command: ./setup_links.zsh
       stdout: true
       stderr: true
+
